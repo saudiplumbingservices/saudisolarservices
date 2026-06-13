@@ -1,0 +1,151 @@
+.page {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background-color: var(--background);
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--primary);
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.backBtn:hover {
+  transform: translateX(-4px);
+  color: var(--primary-light);
+}
+
+.header {
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 48px;
+}
+
+.content {
+  background-color: var(--background-card);
+  border: 1px solid var(--border);
+  padding: 48px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.content h2 {
+  font-size: 1.75rem;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: var(--foreground);
+}
+
+.content h2:first-of-type {
+  margin-top: 0;
+}
+
+.content p {
+  color: var(--foreground-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.box {
+  background-color: var(--background-card);
+  border: 1px solid var(--border);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.boxTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--foreground);
+}
+
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+.checkIcon {
+  color: var(--secondary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.qaSection {
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+  padding-top: 48px;
+}
+
+.qaCard {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+}
+
+.question {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--foreground);
+  margin-bottom: 8px;
+}
+
+.answer {
+  color: var(--foreground-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 2.25rem;
+  }
+  
+  .content {
+    padding: 32px 20px;
+  }
+}
