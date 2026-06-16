@@ -31,10 +31,11 @@ We have implemented the following core structural, schema, and interactive updat
 * Clear, direct answers were structured inside code blocks so LLMs can extract clean definitions instantly for queries about Riyadh climate loads, PPR pipes, leak detection tools, and SEC net metering regulations.
 
 ### 3. Interactive "Linkable Assets" (The SEO Moat)
-To attract backlinks and drive high-intent transactional leads, we vibe-coded two custom interactive calculators:
-* **Saudi AC Tonnage & Cooling Calculator:** Installed on the [AC Page](file:///c:/Users/Latitude%207420/Downloads/saudisolarservices-main/src/app/services/ac/page.tsx). Calculates the exact BTU/hr and AC Tonnage required for standard and top-floor rooms in Saudi Arabia, taking local climate heat zones and sun exposure factors into account.
-* **Saudi Solar Savings & Payback Estimator:** Installed on the [Solar Page](file:///c:/Users/Latitude%207420/Downloads/saudisolarservices-main/src/app/services/solar/page.tsx). Sizers residential PV arrays, calculates panel count, estimates installation costs, and provides yearly savings and payback period estimations under the SEC Net Metering framework.
-* Both calculators dynamically link to the main **Quote Form** at the bottom of the home page, passing custom pre-filled message parameters (e.g., system sizes/AC tons calculated by the user) to maximize conversion rates.
+To attract backlinks and drive high-intent transactional leads (focusing on action-oriented searches that resist zero-click AI answers), we developed three custom interactive calculators:
+* **Saudi AC Tonnage & Cooling Calculator:** Installed on the [AC Page](file:///d:/saudi-ac-plumbing-solar-installation-service/src/app/services/ac/page.tsx). Calculates the exact BTU/hr and AC Tonnage required for standard and top-floor rooms in Saudi Arabia, taking local climate heat zones and sun exposure factors into account.
+* **Saudi Solar Savings & Payback Estimator:** Installed on the [Solar Page](file:///d:/saudi-ac-plumbing-solar-installation-service/src/app/services/solar/page.tsx). Sizers residential PV arrays, calculates panel count, estimates installation costs, and provides yearly savings and payback period estimations under the SEC Net Metering framework.
+* **Saudi Water Leak Cost & Pump Sizer:** Installed on the [Plumbing Page](file:///d:/saudi-ac-plumbing-solar-installation-service/src/app/services/plumbing/page.tsx). Features a Water Leak Cost Estimator (using NWC tiered water tariffs with wastewater surcharges) and a Booster Pump (Dynamo) Sizer based on building height and outlets.
+* All three calculators dynamically link to the main **Quote Form** at the bottom of the home page, passing custom pre-filled message parameters (e.g., calculated AC tons, solar array size, or pump HP) to maximize conversion rates.
 
 ---
 

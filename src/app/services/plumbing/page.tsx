@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./plumbing.module.css";
+import PlumbingCalculator from "@/components/PlumbingCalculator";
 
 export const metadata = {
   title: "Certified Plumbing & Water Leak Detection in Saudi Arabia | Miyar Technical Services",
@@ -47,6 +48,8 @@ export default function PlumbingServicePage() {
               <li style={{ marginBottom: "10px" }}><strong>Water Heater Installations:</strong> Setup of energy-efficient electric and hybrid solar water heaters with safety release valves.</li>
               <li style={{ marginBottom: "10px" }}><strong>Drainage Descaling & Jetting:</strong> High-pressure hydro-jetting to clean greasy restaurant drains and sewer blockages before winter rains.</li>
             </ul>
+
+            <PlumbingCalculator />
 
             {/* QA Section (Topical Map / AEO Search Target) */}
             <div className={styles.qaSection}>
