@@ -22,11 +22,11 @@ export const blogs: Blog[] = [
   {
     slug: "dust-storms-ac-riyadh",
     title: "How Dust Storms Destroy Your AC in Riyadh — And How to Prevent It",
-    metaTitle: "Dust Storm AC Damage in Riyadh: Prevention & Maintenance Tips | EcoFlow",
+    metaTitle: "Dust Storm AC Damage in Riyadh: Prevention & Maintenance Tips | Miyar Technical Services",
     metaDescription: "Riyadh dust storms clog AC filters, block condenser coils, and reduce cooling by 40%. Learn how to protect your split AC with professional maintenance before peak summer.",
     category: "AC & HVAC",
     categoryColor: "#06b6d4",
-    date: "June 10, 2025",
+    date: "June 10, 2026",
     readTime: "6 min read",
     excerpt: "Riyadh experiences some of the world's most intense dust storms (haboobs). Each event forces fine desert particulate deep into your AC system, accelerating wear and slashing cooling output by up to 40%.",
     content: [
@@ -105,11 +105,11 @@ export const blogs: Blog[] = [
   {
     slug: "low-water-pressure-saudi-villa",
     title: "Low Water Pressure in Your Saudi Villa? Here Are the Real Causes and Fixes",
-    metaTitle: "Low Water Pressure in Saudi Villas: Booster Pump Repair & Solutions | EcoFlow",
+    metaTitle: "Low Water Pressure in Saudi Villas: Booster Pump Repair & Solutions | Miyar Technical Services",
     metaDescription: "Discover why Saudi villas lose water pressure: faulty booster dynamos, scaled PPR pipes, hidden leaks. Expert plumbers explain the fix for Riyadh, Jeddah & Dammam.",
     category: "Plumbing",
     categoryColor: "#3b82f6",
-    date: "June 8, 2025",
+    date: "June 8, 2026",
     readTime: "5 min read",
     excerpt: "Weak water flow from your showers or kitchen taps in Saudi Arabia is almost always caused by one of three engineering failures. Understanding which one applies to your villa determines whether the fix costs SAR 50 or SAR 5,000.",
     content: [
@@ -184,12 +184,12 @@ export const blogs: Blog[] = [
   },
   {
     slug: "sec-net-metering-guide-saudi",
-    title: "SEC Net Metering in Saudi Arabia: The Complete Homeowner's Guide (2025)",
-    metaTitle: "SEC Net Metering 2025: Solar Grid Connection Guide for Saudi Homeowners | EcoFlow",
+    title: "SEC Net Metering in Saudi Arabia: The Complete Homeowner's Guide (2026)",
+    metaTitle: "SEC Net Metering 2026: Solar Grid Connection Guide for Saudi Homeowners | Miyar Technical Services",
     metaDescription: "Step-by-step guide to connecting your solar panels to the SEC grid in Saudi Arabia. Eligibility, application, bidirectional metering, and savings calculation explained.",
     category: "Solar Energy",
     categoryColor: "#eab308",
-    date: "June 5, 2025",
+    date: "June 5, 2026",
     readTime: "8 min read",
     excerpt: "Saudi Arabia's net metering program allows homeowners to sell surplus solar electricity back to the national grid. Here is everything you need to know to connect your PV system to the Saudi Electricity Company (SEC) grid in 2025.",
     content: [
@@ -265,12 +265,12 @@ export const blogs: Blog[] = [
   },
   {
     slug: "vrf-vs-split-ac-saudi-villas",
-    title: "VRF vs Split AC Systems for Saudi Villas: Which Is Right for You in 2025?",
-    metaTitle: "VRF vs Split AC Systems in Saudi Arabia 2025: Cost, Efficiency & Comparison | EcoFlow",
+    title: "VRF vs Split AC Systems for Saudi Villas: Which Is Right for You in 2026?",
+    metaTitle: "VRF vs Split AC Systems in Saudi Arabia 2026: Cost, Efficiency & Comparison | Miyar Technical Services",
     metaDescription: "Compare Variable Refrigerant Flow (VRF) and split AC systems for Saudi villas. Upfront costs, electricity savings, and which system handles 45°C Saudi summers better.",
     category: "AC & HVAC",
     categoryColor: "#06b6d4",
-    date: "June 3, 2025",
+    date: "June 3, 2026",
     readTime: "7 min read",
     excerpt: "As Saudi villa sizes grow larger, homeowners face a critical HVAC decision: install multiple split ACs in every room, or invest in a single VRF system? The answer depends on villa size, usage patterns, and a long-term cost analysis that most contractors never explain clearly.",
     content: [
@@ -339,12 +339,12 @@ export const blogs: Blog[] = [
   },
   {
     slug: "solar-water-heater-saudi-arabia",
-    title: "Solar Water Heaters in Saudi Arabia: Electric vs Solar — Which Saves More in 2025?",
-    metaTitle: "Solar Water Heater vs Electric Heater in Saudi Arabia 2025 | EcoFlow",
+    title: "Solar Water Heaters in Saudi Arabia: Electric vs Solar — Which Saves More in 2026?",
+    metaTitle: "Solar Water Heater vs Electric Heater in Saudi Arabia 2026 | Miyar Technical Services",
     metaDescription: "Compare solar water heaters vs electric water heaters for Saudi homes. Installation costs, savings, and which system is most reliable during Ramadan and winter in KSA.",
     category: "Solar Energy",
     categoryColor: "#eab308",
-    date: "May 30, 2025",
+    date: "May 30, 2026",
     readTime: "6 min read",
     excerpt: "Saudi Arabia's abundant sunshine makes solar water heating one of the highest-ROI home upgrades available. But not all solar water heater systems perform equally in KSA's extreme climate — and making the wrong choice can cost thousands in premature replacements.",
     content: [

@@ -22,10 +22,10 @@ export default function Footer() {
                 fillOpacity="0.8"
               />
             </svg>
-            <span className={styles.logoText}>EcoFlow</span>
+            <span className={styles.logoText}>Miyar</span>
           </div>
           <p className={styles.brandDesc}>
-            EcoFlow is a premier home maintenance and energy provider in Saudi Arabia. We deliver certified services for HVAC systems, plumbing engineering, and smart solar microgrids.
+            Miyar Technical Services is a premier home maintenance and energy provider in Saudi Arabia. We deliver certified services for HVAC systems, plumbing engineering, and smart solar microgrids.
           </p>
           <div className={styles.licenseRow}>
             <span className={styles.badge}>SEC Certified</span>
@@ -119,7 +119,7 @@ export default function Footer() {
             <p>
               <strong>Support Email:</strong>
               <br />
-              <a href="mailto:support@ecoflow-sa.com">support@ecoflow-sa.com</a>
+              <a href="mailto:info@miyartechnicalservices.com">info@miyartechnicalservices.com</a>
             </p>
           </div>
         </div>
@@ -128,7 +128,7 @@ export default function Footer() {
       {/* Bottom Copyright Bar */}
       <div className={`${styles.bottomBar} container`}>
         <span className={styles.copyright}>
-          © {new Date().getFullYear()} EcoFlow Services. All rights reserved. Made in KSA.
+          © {new Date().getFullYear()} Miyar Technical Services. All rights reserved. Made in KSA.
         </span>
         <ul className={styles.bottomLinks}>
           <li>

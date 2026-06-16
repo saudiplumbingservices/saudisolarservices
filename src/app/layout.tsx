@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Professional AC, Plumbing & Solar Services in Saudi Arabia | Eco-Flow",
+  title: "Professional AC, Plumbing & Solar Services in Saudi Arabia | Miyar Technical Services",
   description: "Expert HVAC/AC repairs, plumbing maintenance, and solar panel installation services across Saudi Arabia. Available 24/7. Get a free quote today!",
   keywords: [
     "AC service Saudi Arabia",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     "AC repair Riyadh",
     "Emergency plumber Jeddah",
     "Solar energy Dammam",
-    "Eco-Flow Services"
+    "Miyar Technical Services"
   ],
-  authors: [{ name: "Eco-Flow Services" }],
+  authors: [{ name: "Miyar Technical Services" }],
 };
 
 export const viewport: Viewport = {

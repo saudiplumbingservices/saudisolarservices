@@ -1,8 +1,9 @@
 import Link from "next/link";
 import styles from "./ac.module.css";
+import AcCalculator from "@/components/AcCalculator";
 
 export const metadata = {
-  title: "Professional AC Repair & HVAC Installation Services in Saudi Arabia | Eco-Flow",
+  title: "Professional AC Repair & HVAC Installation Services in Saudi Arabia | Miyar Technical Services",
   description: "Licensed HVAC engineers offering split AC repairs, central air maintenance, gas recharging (R410A), and duct sanitizing in Riyadh, Jeddah, and Dammam.",
 };
 
@@ -47,6 +48,8 @@ export default function ACServicePage() {
               <li style={{ marginBottom: "10px" }}><strong>Duct Cleaning & Air Flow Sanitization:</strong> Removal of desert dust, pollen, and allergens from ducted splits and package units to guarantee pristine indoor air quality.</li>
               <li style={{ marginBottom: "10px" }}><strong>Compressor & Fan Motor Swap:</strong> Direct replacement of faulty compressor units with original manufacture warranty parts.</li>
             </ul>
+
+            <AcCalculator />
 
             {/* QA Section (Topical Map / AEO Search Target) */}
             <div className={styles.qaSection}>

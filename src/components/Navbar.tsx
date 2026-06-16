@@ -74,7 +74,7 @@ export default function Navbar() {
             />
             <path d="M16 11V21M11 16H21M12.5 12.5L19.5 19.5M12.5 19.5L19.5 12.5" stroke="var(--background)" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
-          <span className={styles.logoText}>EcoFlow</span>
+          <span className={styles.logoText}>Miyar</span>
         </Link>
 
         {/* Navigation Menu */}

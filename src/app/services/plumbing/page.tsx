@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./plumbing.module.css";
 
 export const metadata = {
-  title: "Certified Plumbing & Water Leak Detection in Saudi Arabia | Eco-Flow",
+  title: "Certified Plumbing & Water Leak Detection in Saudi Arabia | Miyar Technical Services",
   description: "Professional plumbers offering acoustic leak detection, booster pump repair, smart water heater installation, and pipe fittings in Riyadh, Jeddah, and Dammam.",
 };
 

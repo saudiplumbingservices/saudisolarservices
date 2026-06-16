@@ -1,0 +1,211 @@
+.calculatorCard {
+  background-color: var(--background-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.calcTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.icon {
+  color: var(--primary-light);
+}
+
+.calcDesc {
+  font-size: 0.95rem;
+  color: var(--foreground-muted);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+}
+
+.inputsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--foreground-muted);
+  letter-spacing: 0.05em;
+}
+
+.rangeRow {
+  display: flex;
+  gap: 20px;
+}
+
+.rangeCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rangeVal {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--border);
+  outline: none;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition-fast);
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: var(--primary);
+}
+
+.select {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.select:focus {
+  border-color: var(--primary-light);
+}
+
+/* Results styles */
+.resultsColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.resultBox {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.04), rgba(14, 116, 144, 0.08));
+  border: 1px solid rgba(14, 116, 144, 0.15);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.resultItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resultLabel {
+  font-size: 0.9rem;
+  color: var(--foreground-muted);
+}
+
+.resultValue {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(14, 116, 144, 0.15);
+  margin: 4px 0;
+}
+
+.tonnageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.tonnageLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tonnageValue {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.tonnageDetail {
+  font-size: 0.75rem;
+  color: var(--foreground-muted);
+}
+
+.calcFooter {
+  font-size: 0.75rem;
+  color: var(--foreground-muted);
+  margin-top: 24px;
+  border-top: 1px dashed var(--border);
+  padding-top: 16px;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .calculatorCard {
+    padding: 20px;
+  }
+}

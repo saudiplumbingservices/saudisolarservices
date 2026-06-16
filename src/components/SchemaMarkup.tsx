@@ -4,10 +4,10 @@ export default function SchemaMarkup() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    "name": "EcoFlow Services",
-    "image": "https://ecoflow-sa.com/hero-bg.png",
-    "@id": "https://ecoflow-sa.com/#business",
-    "url": "https://ecoflow-sa.com",
+    "name": "Miyar Technical Services",
+    "image": "https://miyartechnicalservices.com/hero-bg.png",
+    "@id": "https://miyartechnicalservices.com/#business",
+    "url": "https://miyartechnicalservices.com",
     "telephone": "+966500000000",
     "priceRange": "$$",
     "address": {
@@ -46,21 +46,21 @@ export default function SchemaMarkup() {
       {
         "@type": "Service",
         "name": "AC & HVAC Maintenance & Repair",
-        "provider": { "@id": "https://ecoflow-sa.com/#business" },
+        "provider": { "@id": "https://miyartechnicalservices.com/#business" },
         "areaServed": "SA",
         "description": "Professional AC repairs, split-system duct cleaning, gas recharging, and compressor replacements tailored for Saudi summer climates."
       },
       {
         "@type": "Service",
         "name": "Certified Plumbing & Pipe Repair",
-        "provider": { "@id": "https://ecoflow-sa.com/#business" },
+        "provider": { "@id": "https://miyartechnicalservices.com/#business" },
         "areaServed": "SA",
         "description": "Non-destructive water leak detection, water pressure booster pump installation, and descaling services."
       },
       {
         "@type": "Service",
         "name": "Solar Panel Installation & Maintenance",
-        "provider": { "@id": "https://ecoflow-sa.com/#business" },
+        "provider": { "@id": "https://miyartechnicalservices.com/#business" },
         "areaServed": "SA",
         "description": "SEC certified on-grid and off-grid solar energy systems engineering, battery storage backups, and PV panels cleaning."
       }
@@ -93,6 +93,54 @@ export default function SchemaMarkup() {
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Low water pressure in Saudi villas is commonly caused by a malfunctioning gravity-fed rooftop tank booster pump (dynamo), scale buildup in PPR supply pipes, or underground leakage in the main supply pipe. Installing a smart automatic booster pump resolves this."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my split AC blowing warm air?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This is typically caused by: 1) Low refrigerant level due to a copper line leak, 2) A failed compressor capacitor, 3) Heavily soiled condenser coils blocking heat exchange, or 4) A faulty outdoor fan motor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the advantage of VRF AC systems for Saudi villas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VRF (Variable Refrigerant Flow) systems allow a single outdoor unit to connect to multiple indoor units, adjusting motor speed dynamically. This delivers precise zoning, occupies less rooftop space, and reduces monthly electrical consumption by up to 40% compared to standard split AC units."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you find water leaks without breaking the walls?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We utilize non-destructive technologies like acoustic leak detectors to capture the specific sound frequency of escaping water and thermal imaging cameras to detect hidden moisture patterns and temperature differentials behind concrete walls and floor tiles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What type of water pipes are best for houses in Saudi Arabia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PPR (Polypropylene Random) pipes are highly recommended for hot and cold water supply lines in KSA. They offer excellent heat resistance, prevent calcium scale buildup, do not corrode from salty coastal air, and are connected using fusion welding to create solid, leak-free joints."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does dust affect solar panels in Saudi Arabia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Desert dust accumulation (soiling) is the primary factor reducing solar output in KSA, which can reduce efficiency by 20% to 30% in a few weeks. We recommend manual cleaning or automated brushes at least twice a month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is SEC Net Metering and how does it save money?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Saudi Electricity Company (SEC) net metering framework allows you to install a bidirectional smart meter. During peak sunny hours, your solar array feeds excess power into the public grid, recording credits that offset the power you draw from the grid at night."
         }
       }
     ]

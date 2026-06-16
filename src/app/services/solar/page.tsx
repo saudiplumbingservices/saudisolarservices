@@ -1,8 +1,9 @@
 import Link from "next/link";
 import styles from "./solar.module.css";
+import SolarCalculator from "@/components/SolarCalculator";
 
 export const metadata = {
-  title: "Solar Panel Installation & SEC Net Metering in KSA | Eco-Flow",
+  title: "Solar Panel Installation & SEC Net Metering in KSA | Miyar Technical Services",
   description: "SEC certified solar engineers designing residential PV systems, battery bank backups, and grid-connected net metering in Riyadh, Dammam, and Jeddah.",
 };
 
@@ -47,6 +48,8 @@ export default function SolarServicePage() {
               <li style={{ marginBottom: "10px" }}><strong>Solar Panel Cleaning & Maintenance:</strong> Automated and manual anti-soiling cleaning systems to offset the negative impacts of Saudi desert dust.</li>
               <li style={{ marginBottom: "10px" }}><strong>Shade Analysis & Structural Design:</strong> 3D modeling of your rooftop to maximize exposure and build robust wind-resistant mounting structures.</li>
             </ul>
+
+            <SolarCalculator />
 
             {/* QA Section (Topical Map / AEO Search Target) */}
             <div className={styles.qaSection}>

@@ -44,7 +44,7 @@ export default function QuoteForm() {
 
   // Generate WhatsApp message content
   const generateWhatsAppLink = () => {
-    const baseText = `Hello EcoFlow! I want to request a quote:
+    const baseText = `Hello Miyar Technical Services! I want to request a quote:
 - *Name*: ${formData.name}
 - *Phone*: ${formData.phone}
 - *City*: ${formData.city}
@@ -90,7 +90,7 @@ export default function QuoteForm() {
               </div>
               <div className={styles.contactText}>
                 <span className={styles.contactLabel}>Email Inquiry</span>
-                <a href="mailto:support@ecoflow-sa.com" className={styles.contactVal}>support@ecoflow-sa.com</a>
+                <a href="mailto:info@miyartechnicalservices.com" className={styles.contactVal}>info@miyartechnicalservices.com</a>
               </div>
             </div>
 

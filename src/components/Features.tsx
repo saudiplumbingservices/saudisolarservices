@@ -6,7 +6,7 @@ export default function Features() {
       <div className={`${styles.grid} container`}>
         {/* Left Column: Description & Bullet Cards */}
         <div className={styles.leftCol}>
-          <span className={styles.tag}>Why Choose EcoFlow</span>
+          <span className={styles.tag}>Why Choose Miyar</span>
           <h2 className={styles.title}>Setting the Gold Standard for Service in Saudi Arabia</h2>
           <p className={styles.desc}>
             We combine licensed engineering standards with rapid customer support. Whether you need immediate relief from a broken AC, emergency plumbing repairs, or a long-term investment in solar power, we have you covered.

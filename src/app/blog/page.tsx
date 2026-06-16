@@ -3,7 +3,7 @@ import { blogs } from "@/data/blogs";
 import styles from "./blog-list.module.css";
 
 export const metadata = {
-  title: "Expert AC, Plumbing & Solar Guides for Saudi Arabia | EcoFlow Blog",
+  title: "Expert AC, Plumbing & Solar Guides for Saudi Arabia | Miyar Technical Services Blog",
   description: "Professional advice on HVAC maintenance, plumbing repairs, and solar energy installation for Saudi homeowners. Written by certified engineers in KSA.",
 };
 

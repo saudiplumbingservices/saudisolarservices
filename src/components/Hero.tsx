@@ -16,7 +16,7 @@ export default function Hero() {
           </h1>
           
           <p className={styles.description}>
-            EcoFlow delivers certified HVAC maintenance, quick-response plumbing repairs, and energy-saving solar panel installations across Saudi Arabia. Experience expert engineering and reliable support today.
+            Miyar Technical Services delivers certified HVAC maintenance, quick-response plumbing repairs, and energy-saving solar panel installations across Saudi Arabia. Experience expert engineering and reliable support today.
           </p>
           
           <div className={styles.ctaGroup}>
@@ -29,7 +29,7 @@ export default function Hero() {
             </a>
             
             <a 
-              href="https://wa.me/966500000000?text=Hello%20EcoFlow,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+              href="https://wa.me/966500000000?text=Hello%20Miyar%20Technical%20Services,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn btn-whatsapp"
@@ -61,7 +61,7 @@ export default function Hero() {
         <div className={styles.badgeCard}>
           <div>
             <h3 className={styles.badgeTitle}>Our Guarantee</h3>
-            <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.6)" }}>Why home owners trust EcoFlow</p>
+            <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.6)" }}>Why home owners trust Miyar</p>
           </div>
           <ul className={styles.badgeList}>
             <li className={styles.badgeItem}>
