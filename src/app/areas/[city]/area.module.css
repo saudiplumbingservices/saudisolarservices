@@ -1,0 +1,291 @@
+.page {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--foreground-muted);
+  margin-bottom: 32px;
+}
+
+.breadcrumb a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  margin-bottom: 56px;
+}
+
+.regionTag {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(14, 116, 144, 0.12);
+  color: var(--primary);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: var(--foreground);
+}
+
+.heroAr {
+  font-size: 1.1rem;
+  color: var(--foreground-muted);
+  margin-bottom: 0;
+  direction: rtl;
+  font-family: serif;
+}
+
+.introText {
+  font-size: 1.05rem;
+  color: var(--foreground-muted);
+  line-height: 1.75;
+  max-width: 780px;
+  margin-bottom: 32px;
+}
+
+.statBar {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 20px 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-top: 32px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statValue {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--foreground-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Service Cards */
+.services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.serviceCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--card-bg);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.serviceCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.cardAccent {
+  height: 4px;
+}
+
+.cardInner {
+  padding: 32px;
+}
+
+.serviceIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.serviceHeadline {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--foreground);
+}
+
+.serviceBody {
+  font-size: 0.95rem;
+  color: var(--foreground-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.factList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.factItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--foreground-muted);
+}
+
+.factDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* FAQ */
+.faqSection {
+  margin-bottom: 64px;
+}
+
+.faqTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: var(--foreground);
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.faqCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.question {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--foreground);
+  margin-bottom: 10px;
+}
+
+.answer {
+  font-size: 0.9rem;
+  color: var(--foreground-muted);
+  line-height: 1.7;
+}
+
+/* CTA */
+.cta {
+  padding: 48px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.1), rgba(22, 163, 74, 0.06));
+  border: 1px solid rgba(14, 116, 144, 0.18);
+}
+
+.ctaTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.ctaDesc {
+  color: var(--foreground-muted);
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+}
+
+.ctaBtns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* City links strip */
+.citiesNav {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.citiesNavTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground-muted);
+  margin-bottom: 16px;
+}
+
+.cityChips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cityChip {
+  padding: 6px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--foreground-muted);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.cityChip:hover,
+.cityChipActive {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+@media (min-width: 768px) {
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

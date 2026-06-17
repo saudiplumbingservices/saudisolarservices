@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
+import { PHONE_E164, PHONE_DISPLAY } from "@/lib/siteConfig";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,17 +19,18 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
     const initialTheme = savedTheme || systemTheme;
-    
+
     setTheme(initialTheme);
     document.documentElement.setAttribute("data-theme", initialTheme);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "";
     };
   }, []);
 
@@ -44,13 +46,13 @@ export default function Navbar() {
     if (!menuOpen) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "";
     }
   };
 
   const closeMenu = () => {
     setMenuOpen(false);
-    document.body.style.overflow = "unset";
+    document.body.style.overflow = "";
   };
 
   return (
@@ -96,6 +98,11 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
+              <Link href="/blog" className={styles.navLink} onClick={closeMenu}>
+                Blog
+              </Link>
+            </li>
+            <li>
               <Link href="/#contact" className={styles.navLink} onClick={closeMenu}>
                 Contact
               </Link>
@@ -127,11 +134,11 @@ export default function Navbar() {
           </button>
 
           {/* Quick Call */}
-          <a href="tel:+966500000000" className={styles.phoneBtn}>
+          <a href={`tel:${PHONE_E164}`} className={styles.phoneBtn}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
-            <span>+966 50 000 0000</span>
+            <span>{PHONE_DISPLAY}</span>
           </a>
 
           {/* Mobile Menu Button */}

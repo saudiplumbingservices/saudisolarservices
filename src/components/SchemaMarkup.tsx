@@ -1,14 +1,14 @@
-import React from "react";
+import { PHONE_E164, BASE_URL, BUSINESS_NAME } from "@/lib/siteConfig";
 
 export default function SchemaMarkup() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    "name": "Miyar Technical Services",
-    "image": "https://miyartechnicalservices.com/hero-bg.png",
-    "@id": "https://miyartechnicalservices.com/#business",
-    "url": "https://miyartechnicalservices.com",
-    "telephone": "+966500000000",
+    "name": BUSINESS_NAME,
+    "image": `${BASE_URL}/hero-bg.png`,
+    "@id": `${BASE_URL}/#business`,
+    "url": BASE_URL,
+    "telephone": PHONE_E164,
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -46,21 +46,21 @@ export default function SchemaMarkup() {
       {
         "@type": "Service",
         "name": "AC & HVAC Maintenance & Repair",
-        "provider": { "@id": "https://miyartechnicalservices.com/#business" },
+        "provider": { "@id": `${BASE_URL}/#business` },
         "areaServed": "SA",
         "description": "Professional AC repairs, split-system duct cleaning, gas recharging, and compressor replacements tailored for Saudi summer climates."
       },
       {
         "@type": "Service",
         "name": "Certified Plumbing & Pipe Repair",
-        "provider": { "@id": "https://miyartechnicalservices.com/#business" },
+        "provider": { "@id": `${BASE_URL}/#business` },
         "areaServed": "SA",
         "description": "Non-destructive water leak detection, water pressure booster pump installation, and descaling services."
       },
       {
         "@type": "Service",
         "name": "Solar Panel Installation & Maintenance",
-        "provider": { "@id": "https://miyartechnicalservices.com/#business" },
+        "provider": { "@id": `${BASE_URL}/#business` },
         "areaServed": "SA",
         "description": "SEC certified on-grid and off-grid solar energy systems engineering, battery storage backups, and PV panels cleaning."
       }

@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import { PHONE_E164, WHATSAPP_BASE } from "@/lib/siteConfig";
 
 export default function Hero() {
   return (
@@ -28,10 +29,10 @@ export default function Hero() {
               </svg>
             </a>
             
-            <a 
-              href="https://wa.me/966500000000?text=Hello%20Miyar%20Technical%20Services,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={`${WHATSAPP_BASE}?text=Hello%20Miyar%20Technical%20Services,%20I%20would%20like%20to%20inquire%20about%20your%20services.`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-whatsapp"
             >
               <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">

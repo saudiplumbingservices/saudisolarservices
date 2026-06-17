@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./plumbing.module.css";
 import PlumbingCalculator from "@/components/PlumbingCalculator";
+import { PHONE_E164, WHATSAPP_BASE } from "@/lib/siteConfig";
 
 export const metadata = {
   title: "Certified Plumbing & Water Leak Detection in Saudi Arabia | Miyar Technical Services",
@@ -53,7 +54,7 @@ export default function PlumbingServicePage() {
 
             {/* QA Section (Topical Map / AEO Search Target) */}
             <div className={styles.qaSection}>
-              <h2>Frequently Asked Questions (AEO/LLM Target)</h2>
+              <h2>Frequently Asked Questions</h2>
               
               <div className={styles.qaCard}>
                 <h3 className={styles.question}>Why is water pressure low in my Saudi villa?</h3>
@@ -87,14 +88,14 @@ export default function PlumbingServicePage() {
                 Water leak or broken pump? Contact our hotline for rapid dispatch.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                <a href="tel:+966500000000" className="btn btn-primary" style={{ width: "100%" }}>
+                <a href={`tel:${PHONE_E164}`} className="btn btn-primary" style={{ width: "100%" }}>
                   Call Emergency Plumber
                 </a>
-                <a 
-                  href="https://wa.me/966500000000?text=I%20need%20urgent%20plumbing%20leak%20assistance." 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn btn-whatsapp" 
+                <a
+                  href={`${WHATSAPP_BASE}?text=I%20need%20urgent%20plumbing%20leak%20assistance.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp"
                   style={{ width: "100%" }}
                 >
                   WhatsApp Plumbing
@@ -128,6 +129,34 @@ export default function PlumbingServicePage() {
             </div>
           </aside>
         </div>
+
+        {/* City Coverage */}
+        <section style={{ marginTop: "64px", paddingTop: "48px", borderTop: "1px solid var(--border)" }}>
+          <h2 style={{ fontSize: "1.4rem", fontWeight: 700, marginBottom: "8px" }}>Plumbing Service — City Guides</h2>
+          <p style={{ color: "var(--foreground-muted)", fontSize: "0.9rem", marginBottom: "24px" }}>
+            Water quality and infrastructure differ across Saudi Arabia. Read the guide for your city.
+          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            {[
+              ["Riyadh", "riyadh", "TDS 600–900 ppm scale"],
+              ["Jeddah", "jeddah", "Flash flood drainage"],
+              ["Dammam", "dammam", "SWCC desalinated water"],
+              ["Mecca", "mecca", "Hajj occupancy surge"],
+              ["Medina", "medina", "Pilgrim hot water"],
+              ["Al Khobar", "khobar", "Premium PPR systems"],
+            ].map(([city, slug, note]) => (
+              <Link key={slug} href={`/areas/${slug}`} style={{
+                padding: "10px 18px", border: "1px solid var(--border)", borderRadius: "var(--radius)",
+                textDecoration: "none", fontSize: "0.875rem", color: "var(--foreground-muted)",
+                background: "var(--card-bg)", display: "flex", flexDirection: "column", gap: "2px",
+                transition: "border-color 0.2s, color 0.2s",
+              }}>
+                <span style={{ fontWeight: 600, color: "var(--foreground)" }}>Plumbing in {city} →</span>
+                <span style={{ fontSize: "0.75rem" }}>{note}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );

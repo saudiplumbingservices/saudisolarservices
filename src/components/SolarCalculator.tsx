@@ -144,8 +144,8 @@ export default function SolarCalculator() {
             </div>
           </div>
 
-          <a 
-            href={`/#contact?service=Solar%20Panel%20System%20Install&message=I%20used%20the%20Solar%20Savings%20Calculator%20and%20need%20a%20feasibility%20quote%20for%20a%20${result.systemSize}%20kWp%20system%20with%20${result.panels}%20panels.`} 
+          <a
+            href={`/?service=Solar%20Panel%20System%20Install&message=I%20used%20the%20Solar%20Savings%20Calculator%20and%20need%20a%20feasibility%20quote%20for%20a%20${result.systemSize}%20kWp%20system%20with%20${result.panels}%20panels.#contact`}
             className="btn btn-accent"
             style={{ width: "100%", justifyContent: "center", marginTop: "16px" }}
           >

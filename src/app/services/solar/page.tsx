@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./solar.module.css";
 import SolarCalculator from "@/components/SolarCalculator";
+import { WHATSAPP_BASE } from "@/lib/siteConfig";
 
 export const metadata = {
   title: "Solar Panel Installation & SEC Net Metering in KSA | Miyar Technical Services",
@@ -53,19 +54,19 @@ export default function SolarServicePage() {
 
             {/* QA Section (Topical Map / AEO Search Target) */}
             <div className={styles.qaSection}>
-              <h2>Frequently Asked Questions (AEO/LLM Target)</h2>
+              <h2>Frequently Asked Questions</h2>
               
               <div className={styles.qaCard}>
                 <h3 className={styles.question}>What is the cost of solar panel installation for a villa in Riyadh?</h3>
                 <p className={styles.answer}>
-                  The typical installation cost for a residential villa in Riyadh ranges from **SAR 15,000 to SAR 40,000**, depending on system size (5kW to 15kW PV arrays). This cost includes tier-1 monocrystalline panels, grid-tie hybrid inverters, mounting frames, SEC approvals, and professional commissioning.
+                  The typical installation cost for a residential villa in Riyadh ranges from <strong>SAR 15,000 to SAR 40,000</strong>, depending on system size (5kW to 15kW PV arrays). This cost includes tier-1 monocrystalline panels, grid-tie hybrid inverters, mounting frames, SEC approvals, and professional commissioning.
                 </p>
               </div>
 
               <div className={styles.qaCard}>
                 <h3 className={styles.question}>How does dust affect solar panels in Saudi Arabia?</h3>
                 <p className={styles.answer}>
-                  Desert dust accumulation (soiling) is the primary factor reducing solar output in KSA. Just a few weeks of dust accumulation can reduce solar panel efficiency by **20% to 30%**. We recommend manual water cleaning or automated robotic brushes **at least twice a month** during dry, dusty periods to maintain peak energy production.
+                  Desert dust accumulation (soiling) is the primary factor reducing solar output in KSA. Just a few weeks of dust accumulation can reduce solar panel efficiency by <strong>20% to 30%</strong>. We recommend manual water cleaning or automated robotic brushes <strong>at least twice a month</strong> during dry, dusty periods to maintain peak energy production.
                 </p>
               </div>
 
@@ -87,14 +88,14 @@ export default function SolarServicePage() {
                 Send us a copy of your electricity bill. We will run a 3D solar layout simulation for free.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                <a href="#contact" className="btn btn-primary" style={{ width: "100%" }}>
+                <a href="/#contact" className="btn btn-primary" style={{ width: "100%" }}>
                   Get Solar Quote
                 </a>
-                <a 
-                  href="https://wa.me/966500000000?text=I%20want%20to%20request%20a%20solar%20panel%20feasibility%20consultation." 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn btn-whatsapp" 
+                <a
+                  href={`${WHATSAPP_BASE}?text=I%20want%20to%20request%20a%20solar%20panel%20feasibility%20consultation.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp"
                   style={{ width: "100%" }}
                 >
                   WhatsApp Solar Expert
@@ -128,6 +129,34 @@ export default function SolarServicePage() {
             </div>
           </aside>
         </div>
+
+        {/* City Coverage */}
+        <section style={{ marginTop: "64px", paddingTop: "48px", borderTop: "1px solid var(--border)" }}>
+          <h2 style={{ fontSize: "1.4rem", fontWeight: 700, marginBottom: "8px" }}>Solar Installation — City Guides</h2>
+          <p style={{ color: "var(--foreground-muted)", fontSize: "0.9rem", marginBottom: "24px" }}>
+            Solar yield and mounting requirements vary by city. Read the guide specific to your location.
+          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            {[
+              ["Riyadh", "riyadh", "7.0 kWh/m²/day — best yield"],
+              ["Jeddah", "jeddah", "Marine-grade 6.3 kWh/m²"],
+              ["Dammam", "dammam", "Industrial soiling 6.2 kWh/m²"],
+              ["Mecca", "mecca", "Near-Haram 6.1 kWh/m²"],
+              ["Medina", "medina", "High-altitude 6.5 kWh/m²"],
+              ["Al Khobar", "khobar", "Premium systems 6.2 kWh/m²"],
+            ].map(([city, slug, note]) => (
+              <Link key={slug} href={`/areas/${slug}`} style={{
+                padding: "10px 18px", border: "1px solid var(--border)", borderRadius: "var(--radius)",
+                textDecoration: "none", fontSize: "0.875rem", color: "var(--foreground-muted)",
+                background: "var(--card-bg)", display: "flex", flexDirection: "column", gap: "2px",
+                transition: "border-color 0.2s, color 0.2s",
+              }}>
+                <span style={{ fontWeight: 600, color: "var(--foreground)" }}>Solar in {city} →</span>
+                <span style={{ fontSize: "0.75rem" }}>{note}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./QuoteForm.module.css";
+import { PHONE_E164, PHONE_DISPLAY, WHATSAPP_BASE, EMAIL } from "@/lib/siteConfig";
 
 export default function QuoteForm() {
   const [formData, setFormData] = useState({
@@ -15,20 +16,43 @@ export default function QuoteForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
+  // Pre-fill form from URL query params (e.g. from calculator CTAs)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get("service");
+    const message = params.get("message");
+    if (service || message) {
+      setFormData((prev) => ({
+        ...prev,
+        ...(service ? { service } : {}),
+        ...(message ? { message } : {}),
+      }));
+    }
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const generateWhatsAppLink = () => {
+    const baseText = `Hello ${`Miyar Technical Services`}! I want to request a quote:
+- *Name*: ${formData.name}
+- *Phone*: ${formData.phone}
+- *City*: ${formData.city}
+- *Service*: ${formData.service}
+- *Message*: ${formData.message}`;
+
+    return `${WHATSAPP_BASE}?text=${encodeURIComponent(baseText)}`;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-
-    // Simulate API request
-    setTimeout(() => {
-      setLoading(false);
-      setSuccess(true);
-    }, 1200);
+    // Open WhatsApp with the enquiry so the business actually receives it
+    window.open(generateWhatsAppLink(), "_blank", "noopener,noreferrer");
+    setLoading(false);
+    setSuccess(true);
   };
 
   const handleReset = () => {
@@ -40,19 +64,6 @@ export default function QuoteForm() {
       message: "",
     });
     setSuccess(false);
-  };
-
-  // Generate WhatsApp message content
-  const generateWhatsAppLink = () => {
-    const baseText = `Hello Miyar Technical Services! I want to request a quote:
-- *Name*: ${formData.name}
-- *Phone*: ${formData.phone}
-- *City*: ${formData.city}
-- *Service*: ${formData.service}
-- *Message*: ${formData.message}`;
-
-    const encodedText = encodeURIComponent(baseText);
-    return `https://wa.me/966500000000?text=${encodedText}`;
   };
 
   return (
@@ -77,7 +88,7 @@ export default function QuoteForm() {
               </div>
               <div className={styles.contactText}>
                 <span className={styles.contactLabel}>Phone Call Support</span>
-                <a href="tel:+966500000000" className={styles.contactVal}>+966 50 000 0000</a>
+                <a href={`tel:${PHONE_E164}`} className={styles.contactVal}>{PHONE_DISPLAY}</a>
               </div>
             </div>
 
@@ -90,7 +101,7 @@ export default function QuoteForm() {
               </div>
               <div className={styles.contactText}>
                 <span className={styles.contactLabel}>Email Inquiry</span>
-                <a href="mailto:info@miyartechnicalservices.com" className={styles.contactVal}>info@miyartechnicalservices.com</a>
+                <a href={`mailto:${EMAIL}`} className={styles.contactVal}>{EMAIL}</a>
               </div>
             </div>
 
@@ -106,10 +117,6 @@ export default function QuoteForm() {
                 <span className={styles.contactVal}>King Fahd Road, Riyadh, KSA</span>
               </div>
             </div>
-          </div>
-
-          <div style={{ fontSize: "0.85rem", color: "var(--foreground-muted)" }}>
-            Commercial Registration: #1010XXXXXX
           </div>
         </div>
 
@@ -142,6 +149,8 @@ export default function QuoteForm() {
                       id="phone"
                       name="phone"
                       required
+                      pattern="^\+?[0-9\s\-]{7,20}$"
+                      title="Please enter a valid phone number (7–20 digits)"
                       placeholder="e.g. +966 50 123 4567"
                       className={styles.input}
                       value={formData.phone}
@@ -177,12 +186,12 @@ export default function QuoteForm() {
                       value={formData.service}
                       onChange={handleChange}
                     >
-                      <option value="AC Installation & Repair">AC Repair & Maintenance</option>
-                      <option value="AC Cleaning Service">AC Cleaning & Duct Sanitizing</option>
-                      <option value="Emergency Plumbing Repair">Emergency Plumbing & Repair</option>
-                      <option value="Water Pump & Heater Setup">Pump & Water Heater Install</option>
+                      <option value="AC Installation & Repair">AC Repair &amp; Maintenance</option>
+                      <option value="AC Cleaning Service">AC Cleaning &amp; Duct Sanitizing</option>
+                      <option value="Emergency Plumbing Repair">Emergency Plumbing &amp; Repair</option>
+                      <option value="Water Pump & Heater Setup">Pump &amp; Water Heater Install</option>
                       <option value="Solar Panel System Install">Solar Panel Installation</option>
-                      <option value="Solar Panel Maintenance">Solar Cleaning & Maintenance</option>
+                      <option value="Solar Panel Maintenance">Solar Cleaning &amp; Maintenance</option>
                     </select>
                   </div>
                 </div>
@@ -202,10 +211,10 @@ export default function QuoteForm() {
 
                 <button type="submit" disabled={loading} className="btn btn-primary" style={{ marginTop: "12px", width: "100%" }}>
                   {loading ? (
-                    <span>Submitting Request...</span>
+                    <span>Opening WhatsApp...</span>
                   ) : (
                     <>
-                      <span>Submit Request</span>
+                      <span>Submit via WhatsApp</span>
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="22" y1="2" x2="11" y2="13"></line>
                         <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
@@ -222,25 +231,25 @@ export default function QuoteForm() {
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </div>
-              <h3 className={styles.successTitle}>Inquiry Sent Successfully!</h3>
+              <h3 className={styles.successTitle}>Request Sent via WhatsApp!</h3>
               <p className={styles.successDesc}>
-                Thank you, <strong>{formData.name}</strong>. We have received your request for <strong>{formData.service}</strong> in <strong>{formData.city}</strong>. One of our engineers will call you shortly.
+                Thank you, <strong>{formData.name}</strong>. Your request for <strong>{formData.service}</strong> in <strong>{formData.city}</strong> has been sent. If WhatsApp did not open automatically, tap the button below.
               </p>
-              
+
               <div style={{ display: "flex", flexDirection: "column", gap: "12px", width: "100%", marginTop: "16px" }}>
-                <a 
+                <a
                   href={generateWhatsAppLink()}
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn btn-whatsapp" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp"
                   style={{ width: "100%" }}
                 >
                   <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style={{ marginRight: "4px" }}>
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.114-2.905-6.99C16.558 1.866 14.077.834 11.442.833 6.005.833 1.582 5.253 1.578 10.69c-.001 1.71.452 3.38 1.312 4.869l-1.02 3.733 3.825-.999zm12.39-7.234c-.272-.136-1.61-.794-1.859-.885-.25-.091-.432-.136-.613.136-.18.272-.703.885-.862 1.066-.158.182-.317.204-.589.068-.272-.136-1.15-.424-2.19-1.353-.809-.721-1.355-1.613-1.514-1.886-.159-.272-.017-.419.119-.554.122-.122.272-.318.408-.477.136-.16.182-.273.272-.455.09-.182.046-.341-.023-.477-.068-.136-.613-1.477-.84-2.023-.22-.53-.443-.457-.613-.466-.158-.009-.34-.01-.522-.01-.182 0-.477.068-.727.341-.25.272-.954.932-.954 2.273s.977 2.636 1.114 2.818c.136.182 1.92 2.932 4.654 4.113.65.28 1.157.447 1.554.573.654.208 1.25.178 1.721.108.525-.078 1.61-.659 1.837-1.295.227-.636.227-1.182.159-1.295-.068-.113-.25-.204-.522-.34z"/>
                   </svg>
-                  Send via WhatsApp for Instant Reply
+                  Resend via WhatsApp
                 </a>
-                
+
                 <button onClick={handleReset} className="btn btn-secondary" style={{ width: "100%" }}>
                   Submit Another Request
                 </button>

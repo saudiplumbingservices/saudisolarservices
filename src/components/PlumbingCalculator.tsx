@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./PlumbingCalculator.module.css";
 
 export default function PlumbingCalculator() {
@@ -195,7 +195,7 @@ export default function PlumbingCalculator() {
               </div>
 
               <a
-                href={`/#contact?service=Leak%20Detection&message=I%20used%20the%20Leak%20Cost%20Calculator%20and%20suspect%20a%20leak%20losing%20about%20${leakResult.dailyLiters}%20liters%20per%20day.`}
+                href={`/?service=Emergency%20Plumbing%20Repair&message=I%20used%20the%20Leak%20Cost%20Calculator%20and%20suspect%20a%20leak%20losing%20about%20${leakResult.dailyLiters}%20liters%20per%20day.#contact`}
                 className="btn btn-accent"
                 style={{ width: "100%", justifyContent: "center", marginTop: "16px" }}
               >
@@ -265,7 +265,7 @@ export default function PlumbingCalculator() {
               </div>
 
               <a
-                href={`/#contact?service=Plumbing%20Maintenance&message=I%20used%20the%20Booster%20Pump%20Sizer%20and%20need%20a%20quote%20for%20a%20${pumpResult.hp}%20HP%20water%20pump%20for%20my%20${floors}-floor%20villa.`}
+                href={`/?service=Water%20Pump%20%26%20Heater%20Setup&message=I%20used%20the%20Booster%20Pump%20Sizer%20and%20need%20a%20quote%20for%20a%20${pumpResult.hp}%20HP%20water%20pump%20for%20my%20${floors}-floor%20villa.#contact`}
                 className="btn btn-accent"
                 style={{ width: "100%", justifyContent: "center", marginTop: "16px" }}
               >

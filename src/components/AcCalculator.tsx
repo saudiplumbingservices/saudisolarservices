@@ -160,12 +160,25 @@ export default function AcCalculator() {
             <div className={styles.tonnageBox}>
               <span className={styles.tonnageLabel}>Recommended AC Size</span>
               <span className={styles.tonnageValue}>{result.tons} Tons</span>
-              <span className={styles.tonnageDetail}>Exact Tonnage calculated: {result.tonnageReal} Tons</span>
+              <span className={styles.tonnageDetail}>Exact tonnage required: {result.tonnageReal} Tons</span>
             </div>
           </div>
+          {parseFloat(result.tonnageReal) > 3.0 && (
+            <div style={{
+              marginTop: "12px",
+              padding: "12px 16px",
+              background: "rgba(234, 179, 8, 0.1)",
+              border: "1px solid rgba(234, 179, 8, 0.35)",
+              borderRadius: "8px",
+              fontSize: "0.85rem",
+              color: "var(--foreground)",
+            }}>
+              ⚠️ <strong>Large space detected:</strong> This room requires a commercial-grade system ({result.tonnageReal} tons). Contact us for a custom multi-unit or cassette AC design.
+            </div>
+          )}
 
-          <a 
-            href={`/#contact?service=AC%20Installation%20%26%20Repair&message=I%20used%20the%20AC%20calculator%20and%20need%20a%20quote%20for%20a%20${result.tons}%20Ton%20AC%20unit.`} 
+          <a
+            href={`/?service=AC%20Installation%20%26%20Repair&message=I%20used%20the%20AC%20calculator%20and%20need%20a%20quote%20for%20a%20${result.tons}%20Ton%20AC%20unit.#contact`}
             className="btn btn-accent"
             style={{ width: "100%", justifyContent: "center", marginTop: "16px" }}
           >

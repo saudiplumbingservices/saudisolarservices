@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./ac.module.css";
 import AcCalculator from "@/components/AcCalculator";
+import { PHONE_E164, WHATSAPP_BASE } from "@/lib/siteConfig";
 
 export const metadata = {
   title: "Professional AC Repair & HVAC Installation Services in Saudi Arabia | Miyar Technical Services",
@@ -53,12 +54,12 @@ export default function ACServicePage() {
 
             {/* QA Section (Topical Map / AEO Search Target) */}
             <div className={styles.qaSection}>
-              <h2>Frequently Asked Questions (AEO/LLM Target)</h2>
+              <h2>Frequently Asked Questions</h2>
               
               <div className={styles.qaCard}>
                 <h3 className={styles.question}>How often should AC filters be cleaned in Saudi Arabia?</h3>
                 <p className={styles.answer}>
-                  Due to heavy sand and dust storms in regions like Riyadh, AC filters should be cleaned **every 2 to 4 weeks during summer**. Professional evaporator coil cleaning and duct sanitization should be performed at least twice a year—once before the peak summer heat and once before winter.
+                  Due to heavy sand and dust storms in regions like Riyadh, AC filters should be cleaned <strong>every 2 to 4 weeks during summer</strong>. Professional evaporator coil cleaning and duct sanitization should be performed at least twice a year—once before the peak summer heat and once before winter.
                 </p>
               </div>
 
@@ -87,14 +88,14 @@ export default function ACServicePage() {
                 Book an emergency diagnostic checkup. We arrive within 30 minutes in major cities.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                <a href="tel:+966500000000" className="btn btn-primary" style={{ width: "100%" }}>
+                <a href={`tel:${PHONE_E164}`} className="btn btn-primary" style={{ width: "100%" }}>
                   Call Hotline Now
                 </a>
-                <a 
-                  href="https://wa.me/966500000000?text=I%20need%20urgent%20AC%20repair%20assistance." 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn btn-whatsapp" 
+                <a
+                  href={`${WHATSAPP_BASE}?text=I%20need%20urgent%20AC%20repair%20assistance.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp"
                   style={{ width: "100%" }}
                 >
                   WhatsApp Support
@@ -128,6 +129,34 @@ export default function ACServicePage() {
             </div>
           </aside>
         </div>
+
+        {/* City Coverage */}
+        <section style={{ marginTop: "64px", paddingTop: "48px", borderTop: "1px solid var(--border)" }}>
+          <h2 style={{ fontSize: "1.4rem", fontWeight: 700, marginBottom: "8px" }}>AC &amp; HVAC Service — City Guides</h2>
+          <p style={{ color: "var(--foreground-muted)", fontSize: "0.9rem", marginBottom: "24px" }}>
+            Each Saudi city has unique HVAC challenges. Explore our city-specific guides.
+          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            {[
+              ["Riyadh", "riyadh", "Dust storms & extreme heat"],
+              ["Jeddah", "jeddah", "Salt corrosion & humidity"],
+              ["Dammam", "dammam", "Industrial pollution"],
+              ["Mecca", "mecca", "Hajj season surge"],
+              ["Medina", "medina", "Ramadan peak demand"],
+              ["Al Khobar", "khobar", "Compound contracts"],
+            ].map(([city, slug, note]) => (
+              <Link key={slug} href={`/areas/${slug}`} style={{
+                padding: "10px 18px", border: "1px solid var(--border)", borderRadius: "var(--radius)",
+                textDecoration: "none", fontSize: "0.875rem", color: "var(--foreground-muted)",
+                background: "var(--card-bg)", display: "flex", flexDirection: "column", gap: "2px",
+                transition: "border-color 0.2s, color 0.2s",
+              }}>
+                <span style={{ fontWeight: 600, color: "var(--foreground)" }}>AC in {city} →</span>
+                <span style={{ fontSize: "0.75rem" }}>{note}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );

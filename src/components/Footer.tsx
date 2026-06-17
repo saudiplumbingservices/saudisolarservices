@@ -1,4 +1,6 @@
+import Link from "next/link";
 import styles from "./Footer.module.css";
+import { PHONE_E164, PHONE_DISPLAY } from "@/lib/siteConfig";
 
 export default function Footer() {
   return (
@@ -71,30 +73,38 @@ export default function Footer() {
           <h4 className={styles.colTitle}>Services</h4>
           <ul className={styles.linkList}>
             <li>
-              <a href="#services" className={styles.link}>
-                Split AC Repair
-              </a>
+              <Link href="/services/ac" className={styles.link}>
+                AC &amp; HVAC Repair
+              </Link>
             </li>
             <li>
-              <a href="#services" className={styles.link}>
-                Central HVAC Care
-              </a>
+              <Link href="/services/plumbing" className={styles.link}>
+                Plumbing &amp; Leak Detection
+              </Link>
             </li>
             <li>
-              <a href="#services" className={styles.link}>
-                Leak Detection
-              </a>
+              <Link href="/services/solar" className={styles.link}>
+                Solar Panel Installation
+              </Link>
             </li>
             <li>
-              <a href="#services" className={styles.link}>
-                Booster Pump Install
-              </a>
+              <Link href="/blog" className={styles.link}>
+                Expert Guides (Blog)
+              </Link>
             </li>
-            <li>
-              <a href="#services" className={styles.link}>
-                PV Solar Installation
-              </a>
-            </li>
+          </ul>
+        </div>
+
+        {/* Cities */}
+        <div>
+          <h4 className={styles.colTitle}>Areas We Serve</h4>
+          <ul className={styles.linkList}>
+            <li><Link href="/areas/riyadh" className={styles.link}>Riyadh</Link></li>
+            <li><Link href="/areas/jeddah" className={styles.link}>Jeddah</Link></li>
+            <li><Link href="/areas/dammam" className={styles.link}>Dammam</Link></li>
+            <li><Link href="/areas/mecca" className={styles.link}>Mecca</Link></li>
+            <li><Link href="/areas/medina" className={styles.link}>Medina</Link></li>
+            <li><Link href="/areas/khobar" className={styles.link}>Al Khobar</Link></li>
           </ul>
         </div>
 
@@ -112,8 +122,8 @@ export default function Footer() {
             <p>
               <strong>24/7 Hotline:</strong>
               <br />
-              <a href="tel:+966500000000" style={{ color: "var(--primary-light)", fontWeight: "bold" }}>
-                +966 50 000 0000
+              <a href={`tel:${PHONE_E164}`} style={{ color: "var(--primary-light)", fontWeight: "bold" }}>
+                {PHONE_DISPLAY}
               </a>
             </p>
             <p>

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { blogs, getBlogBySlug } from "@/data/blogs";
 import styles from "./blog.module.css";
 import type { Metadata } from "next";
+import { PHONE_E164, PHONE_DISPLAY, WHATSAPP_BASE, BASE_URL, BUSINESS_NAME } from "@/lib/siteConfig";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -15,7 +16,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const blog = getBlogBySlug(slug);
-  if (!blog) return {};
+  if (!blog) notFound();
   return {
     title: blog.metaTitle,
     description: blog.metaDescription,
@@ -28,9 +29,62 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (!blog) notFound();
 
-  const relatedBlogs = blogs.filter((b) => b.slug !== blog.slug).slice(0, 4);
+  const relatedBlogs = blogs
+    .filter((b) => b.slug !== blog.slug && b.category === blog.category)
+    .slice(0, 4)
+    .concat(blogs.filter((b) => b.slug !== blog.slug && b.category !== blog.category))
+    .slice(0, 4);
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${BASE_URL}/blog` },
+      { "@type": "ListItem", "position": 3, "name": blog.title, "item": `${BASE_URL}/blog/${blog.slug}` },
+    ],
+  };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": blog.title,
+    "description": blog.metaDescription,
+    "datePublished": blog.date,
+    "author": {
+      "@type": "Organization",
+      "name": BUSINESS_NAME,
+      "url": BASE_URL,
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": BUSINESS_NAME,
+      "url": BASE_URL,
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}/blog/${blog.slug}`,
+    },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": blog.faq.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer,
+      },
+    })),
+  };
 
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <div className={styles.page}>
       <div className="container">
         {/* Back Button */}
@@ -150,7 +204,7 @@ export default async function BlogPostPage({ params }: Props) {
               <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
                 <a href="/#contact" className="btn btn-primary">Get a Free Quote</a>
                 <a
-                  href="https://wa.me/966500000000"
+                  href={WHATSAPP_BASE}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-whatsapp"
@@ -170,11 +224,11 @@ export default async function BlogPostPage({ params }: Props) {
                 Speak to a certified engineer today.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                <a href="tel:+966500000000" className="btn btn-primary" style={{ width: "100%", fontSize: "0.9rem" }}>
-                  Call +966 50 000 0000
+                <a href={`tel:${PHONE_E164}`} className="btn btn-primary" style={{ width: "100%", fontSize: "0.9rem" }}>
+                  Call {PHONE_DISPLAY}
                 </a>
                 <a
-                  href="https://wa.me/966500000000"
+                  href={WHATSAPP_BASE}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-whatsapp"
@@ -218,5 +272,6 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </div>
     </div>
+    </>
   );
 }

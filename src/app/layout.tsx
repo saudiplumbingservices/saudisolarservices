@@ -28,6 +28,21 @@ export const metadata: Metadata = {
     "Miyar Technical Services"
   ],
   authors: [{ name: "Miyar Technical Services" }],
+  openGraph: {
+    type: "website",
+    url: "https://miyartechnicalservices.com",
+    siteName: "Miyar Technical Services",
+    title: "Professional AC, Plumbing & Solar Services in Saudi Arabia | Miyar Technical Services",
+    description: "Expert HVAC/AC repairs, plumbing maintenance, and solar panel installation services across Saudi Arabia. Available 24/7. Get a free quote today!",
+    images: [
+      {
+        url: "https://miyartechnicalservices.com/hero-bg.png",
+        width: 1200,
+        height: 630,
+        alt: "Miyar Technical Services — AC, Plumbing & Solar in Saudi Arabia",
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
