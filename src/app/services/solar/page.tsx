@@ -29,6 +29,36 @@ export default function SolarServicePage() {
           </p>
         </header>
 
+        {/* Individual Services */}
+        <section style={{ marginBottom: "56px", paddingBottom: "48px", borderBottom: "1px solid var(--border)" }}>
+          <h2 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "6px", color: "var(--foreground)" }}>Browse Solar Services</h2>
+          <p style={{ fontSize: "0.875rem", color: "var(--foreground-muted)", marginBottom: "20px" }}>Select a specific service for detailed information, pricing, and process steps.</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "12px" }}>
+            {[
+              { slug: "solar-installation", label: "Grid-Tied Solar Installation", note: "Tier-1 panels, SEC application, full commissioning" },
+              { slug: "sec-net-metering", label: "SEC Net Metering Application", note: "End-to-end application management, smart meter" },
+              { slug: "battery-storage", label: "Battery Storage Systems", note: "Huawei LUNA2000, BYD Battery-Box, hybrid inverters" },
+              { slug: "solar-panel-cleaning", label: "Solar Panel Cleaning & Maintenance", note: "Demineralised water wash, salt removal, contracts" },
+              { slug: "off-grid-solar", label: "Off-Grid & Hybrid Solar", note: "Farm & remote sites, diesel hybrid, battery banks" },
+            ].map(({ slug, label, note }) => (
+              <a
+                key={slug}
+                href={`/services/solar/${slug}`}
+                style={{
+                  display: "flex", flexDirection: "column", gap: "4px",
+                  padding: "16px 18px", border: "1px solid var(--border)",
+                  borderRadius: "var(--radius)", textDecoration: "none",
+                  background: "var(--card-bg)", transition: "border-color 0.2s",
+                  borderLeft: "3px solid #eab308",
+                }}
+              >
+                <span style={{ fontWeight: 700, fontSize: "0.9rem", color: "var(--foreground)" }}>{label} →</span>
+                <span style={{ fontSize: "0.775rem", color: "var(--foreground-muted)" }}>{note}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
         {/* Grid Layout */}
         <div className={styles.grid}>
           {/* Main Content */}

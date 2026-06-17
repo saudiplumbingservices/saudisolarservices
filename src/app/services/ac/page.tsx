@@ -29,6 +29,37 @@ export default function ACServicePage() {
           </p>
         </header>
 
+        {/* Individual Services */}
+        <section style={{ marginBottom: "56px", paddingBottom: "48px", borderBottom: "1px solid var(--border)" }}>
+          <h2 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "6px", color: "var(--foreground)" }}>Browse AC &amp; HVAC Services</h2>
+          <p style={{ fontSize: "0.875rem", color: "var(--foreground-muted)", marginBottom: "20px" }}>Select a specific service for detailed information, pricing, and process steps.</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "12px" }}>
+            {[
+              { slug: "split-ac-installation", label: "Split AC Installation", note: "Sizing, copper flaring, vacuum test, commissioning" },
+              { slug: "ac-repair", label: "Emergency AC Repair", note: "2-hour response, 24/7, capacitor to compressor" },
+              { slug: "ac-maintenance", label: "Annual Maintenance Contract", note: "4 visits/year, anti-corrosion, priority emergency" },
+              { slug: "vrf-central-ac", label: "VRF & Central AC Systems", note: "Daikin VRV, Mitsubishi City Multi, multi-zone" },
+              { slug: "refrigerant-recharge", label: "Refrigerant Recharge & Leak Repair", note: "Electronic leak detection, brazing, correct charge" },
+              { slug: "duct-cleaning", label: "Duct Cleaning & Air Sanitization", note: "HEPA vacuum, antimicrobial, indoor air quality" },
+            ].map(({ slug, label, note }) => (
+              <a
+                key={slug}
+                href={`/services/ac/${slug}`}
+                style={{
+                  display: "flex", flexDirection: "column", gap: "4px",
+                  padding: "16px 18px", border: "1px solid var(--border)",
+                  borderRadius: "var(--radius)", textDecoration: "none",
+                  background: "var(--card-bg)", transition: "border-color 0.2s",
+                  borderLeft: "3px solid #06b6d4",
+                }}
+              >
+                <span style={{ fontWeight: 700, fontSize: "0.9rem", color: "var(--foreground)" }}>{label} →</span>
+                <span style={{ fontSize: "0.775rem", color: "var(--foreground-muted)" }}>{note}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
         {/* Grid Layout */}
         <div className={styles.grid}>
           {/* Main Content */}

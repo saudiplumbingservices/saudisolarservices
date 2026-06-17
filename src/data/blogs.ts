@@ -1165,7 +1165,409 @@ const generalBlogs: Blog[] = [
         answer: "Rarely and incompletely. Saudi Arabia receives 50–100mm of annual rainfall compared to 600–800mm in Europe where natural rain cleaning is more effective. When rain does fall in Saudi Arabia, it often contains suspended dust itself (muddy rain), which leaves a residue on panel glass as it dries. Post-rain cleaning is recommended within 48 hours of any significant rain event to remove the deposited mud layer."
       }
     ]
-  }
+  },
+
+  // ─── NEW BLOGS ────────────────────────────────────────────────────────────
+
+  {
+    slug: "solar-inverter-guide-saudi-arabia-2026",
+    title: "Solar Inverter Guide for Saudi Arabia 2026: Huawei vs SMA vs Sungrow",
+    metaTitle: "Best Solar Inverter Saudi Arabia 2026: Huawei vs SMA vs Sungrow Compared | Miyar Technical Services",
+    metaDescription: "Which solar inverter is best for Saudi Arabia in 2026? Compare Huawei SUN2000, SMA Sunny Boy, and Sungrow SG series on efficiency, SEC compliance, warranty, and real-world KSA performance.",
+    category: "Solar Energy",
+    categoryColor: "#eab308",
+    date: "June 16, 2026",
+    readTime: "8 min read",
+    excerpt: "Your solar inverter converts DC power from the panels into usable 220V AC electricity — it is the single most performance-critical component in your system. Choosing the wrong inverter for Saudi Arabia's 45°C heat, dusty environment, and SEC grid requirements costs you 10–20% of annual yield and thousands in early replacement costs.",
+    content: [
+      {
+        type: "paragraph",
+        text: "Of every component in a Saudi rooftop solar system, the inverter is the one that determines both your daily energy yield and your long-term maintenance costs. Panels degrade slowly and predictably over 25 years. Inverters, exposed to Saudi summer heat that can push internal temperatures above 70°C, carry a statistically meaningful early-failure risk if the wrong model is specified. This guide compares the three brands most commonly specified by Saudi solar contractors and explains the technical differences that matter in KSA conditions."
+      },
+      {
+        type: "heading",
+        text: "What Makes a Good Inverter for Saudi Arabia?"
+      },
+      {
+        type: "list",
+        items: [
+          "High Operating Temperature Range: The inverter must continue operating (not derate) at ambient temperatures above 50°C. Standard models derate output above 40–45°C — costing you generation precisely during the peak summer months when you produce the most solar.",
+          "SEC Anti-Islanding Compliance: Saudi Electricity Company requires inverters to comply with IEC 62116 anti-islanding protection. All inverters from major brands meet this, but cheaper alternatives on the market do not — and SEC will reject your net metering application.",
+          "Wide MPPT Input Range: Saudi rooftops often require non-ideal string configurations. Wider MPPT voltage range (125V–1,000V) gives your installer more flexibility and ensures the inverter tracks panel output efficiently across Saudi's seasonal irradiance variation.",
+          "IP65 or Higher Enclosure Rating: Dust-proof enclosure is non-negotiable in Saudi Arabia's dusty environment. Inverters with ventilation fans (rather than fanless passive cooling) are more efficient but must be installed in sheltered locations away from direct dust exposure.",
+          "Monitoring & Remote Diagnostics: Remote performance monitoring via app or web portal allows you to detect yield drops (from dust, shading, or faults) without a physical inspection. This is particularly valuable in Saudi Arabia where monthly cleaning verification is important."
+        ]
+      },
+      {
+        type: "heading",
+        text: "Huawei SUN2000 — Best Overall for Saudi Arabia"
+      },
+      {
+        type: "paragraph",
+        text: "Huawei's SUN2000 series (KTL-L1, KTL-M1, KTL-M3) dominates the Saudi residential and commercial solar market for good reason. The SUN2000 integrates an AI-powered maximum power point tracking algorithm that adapts to rapidly changing Saudi irradiance conditions (cloud edges, dust haze) 100 times per second — compared to 10–50 times for conventional MPPT. Operating temperature: full output up to 60°C ambient. Efficiency: 98.6% peak, 97.9% CNA (Californian Energy Commission weighted, relevant for variable-irradiance days). FusionSolar monitoring app is genuinely excellent — real-time panel-level data without requiring power optimisers. SAR price range: SAR 3,500–6,500 for 5–10kW residential models."
+      },
+      {
+        type: "heading",
+        text: "SMA Sunny Boy — Best European Engineering"
+      },
+      {
+        type: "paragraph",
+        text: "SMA is the German engineering benchmark for solar inverters globally. The Sunny Boy series has a decades-long track record in the Middle East. Key strength: the OptiTrac Global Peak MPPT algorithm handles shaded strings exceptionally well — relevant for Saudi rooftops where building parapets or water tanks create partial shading. SMA's 5-year warranty (extendable to 20 years) and authorised service centres in Riyadh and Jeddah provide strong long-term support. SAR price: SAR 4,200–7,500 for 5–10kW models. For homeowners who prioritise warranty and service network depth over price, SMA is the premium choice."
+      },
+      {
+        type: "heading",
+        text: "Sungrow SG Series — Best Value"
+      },
+      {
+        type: "paragraph",
+        text: "Sungrow is China's largest inverter manufacturer and the second-largest globally. Their SG series (SG5RS, SG10RS) offers peak efficiency of 98.4% at a price point 20–30% below SMA and 10–20% below Huawei. Full output maintained to 55°C ambient. The iSolarCloud monitoring platform is functional but slightly less user-friendly than Huawei's FusionSolar. Sungrow has an authorised distributor in KSA with reasonable warranty response times. SAR price: SAR 2,800–5,200 for 5–10kW models. For budget-conscious installations where maximum performance per riyal is the goal, Sungrow delivers excellent ROI."
+      },
+      {
+        type: "callout",
+        text: "Our Saudi Market Recommendation: For residential systems under 10kWp with SEC net metering, specify Huawei SUN2000-6KTL-M1 or SUN2000-10KTL-M1. The AI MPPT, FusionSolar monitoring, and full-output high-ambient performance justify the modest premium over Sungrow. For commercial systems over 25kWp, SMA Sunny Tripower for its superior partial-shading performance and 20-year warranty extension."
+      }
+    ],
+    faq: [
+      {
+        question: "How long do solar inverters last in Saudi Arabia's heat?",
+        answer: "Quality inverters (Huawei, SMA, Sungrow) have rated lifespans of 10–15 years. In Saudi Arabia, the main failure risk is electrolytic capacitor degradation accelerated by sustained high temperatures. Fanless models with pure passive cooling last longer than fan-cooled models in dusty environments. Installing the inverter in a shaded, ventilated location (not on a south-facing wall in direct sun) significantly extends lifespan — we have seen correctly installed Huawei and SMA inverters running 12+ years without issues in Riyadh."
+      },
+      {
+        question: "Should I choose a string inverter or a hybrid inverter for my Saudi villa?",
+        answer: "Choose a hybrid inverter (Huawei SUN2000-M2, Sungrow SH, GoodWe ET) if you plan to add battery storage now or in the future — it eliminates the need for a separate battery inverter. Choose a standard string inverter if you are installing purely for grid-tied net metering with no battery plans. String inverters are slightly more efficient and less expensive. In Saudi Arabia, battery payback periods are currently 8–12 years, so most residential installations start with a standard inverter and decide on battery later."
+      },
+      {
+        question: "Does the SEC require specific inverter certifications for net metering?",
+        answer: "Yes. SEC requires inverters to meet IEC 62116 (anti-islanding protection), IEC 61683 (efficiency measurement), and CE or SASO certification. All major inverters from Huawei, SMA, Sungrow, Fronius, and SolarEdge meet these requirements. Generic Chinese inverters from unknown manufacturers frequently do not — leading to application rejection. Always verify SEC approval status with your installer before purchasing."
+      }
+    ]
+  },
+
+  {
+    slug: "ppr-pipe-replacement-saudi-villa-2026",
+    title: "When and How to Replace Your Saudi Villa's Plumbing Pipes in 2026",
+    metaTitle: "PPR Pipe Replacement Saudi Villa 2026: Signs, Cost & Complete Guide | Miyar Technical Services",
+    metaDescription: "How to know when your Saudi villa needs full pipe replacement, what it costs, and how PPR heat-fusion welded pipes eliminate the chronic leaks in galvanised steel and CPVC systems in KSA.",
+    category: "Plumbing",
+    categoryColor: "#3b82f6",
+    date: "June 15, 2026",
+    readTime: "7 min read",
+    excerpt: "Thousands of Saudi villas built between 1985 and 2005 are now entering a critical phase — their original galvanised steel or early CPVC plumbing is failing from the inside, causing chronic leaks behind tiles, falling water pressure, and brown-tinted hot water. Full pipe replacement is the only permanent solution.",
+    content: [
+      {
+        type: "paragraph",
+        text: "Saudi Arabia's rapid housing development boom from the 1980s through the 2000s left a legacy of residential plumbing systems that are now between 20 and 40 years old. The materials used in that era — galvanised steel and early-generation CPVC — perform poorly in Saudi Arabia's uniquely demanding water chemistry: calcium-saturated municipal water in Riyadh (TDS 600–900 ppm), chloride-rich desalinated water in coastal cities, and near-boiling hot water pipe temperatures in poorly insulated summer rooftop systems. If your villa is in this age bracket, understanding the failure signs and replacement options is essential."
+      },
+      {
+        type: "heading",
+        text: "Signs Your Saudi Villa Needs Pipe Replacement"
+      },
+      {
+        type: "list",
+        items: [
+          "Brown or rust-coloured hot water when the tap is first opened — internal pipe corrosion shedding rust particles into the water supply. A health concern and a strong pipe replacement indicator.",
+          "Progressively declining hot water pressure over several years — calcium scale progressively narrows the internal bore. A pipe with 50% scale build-up delivers only 25% of its original flow.",
+          "Recurring leak patches on walls and ceilings — chronic weeping from pipe joints that have been patched multiple times. Each patch is a temporary delay, not a fix.",
+          "Age of building: any villa over 20 years old with original galvanised steel pipes should be evaluated by a licensed plumber. The remaining service life of old galvanised pipe is difficult to predict and failures become exponentially more frequent.",
+          "Smell of iron or sulphur in hot water — bacteria growing in corroded sections of the pipe create hydrogen sulphide, indicating advanced internal corrosion."
+        ]
+      },
+      {
+        type: "heading",
+        text: "Why PPR Is the Correct Replacement Material"
+      },
+      {
+        type: "paragraph",
+        text: "PPR (Polypropylene Random Copolymer) pipe has become the universal standard for new plumbing installations across Saudi Arabia for a single compelling reason: it is completely immune to the failure mechanisms that destroy galvanised steel and CPVC in Saudi conditions. PPR cannot rust. It cannot scale. It cannot be attacked by chlorides. Its smooth internal surface (roughness coefficient 0.007mm versus 0.046mm for CPVC and 0.15mm for steel) maintains flow characteristics for its entire 50-year service life. And its heat-fusion welded joints — the pipe material is melted and fused together at the molecular level — cannot leak. There are no rubber gaskets to degrade, no thread sealants to fail, no solvents that can leave unfused voids."
+      },
+      {
+        type: "heading",
+        text: "What the Replacement Process Involves"
+      },
+      {
+        type: "list",
+        items: [
+          "Site Survey: Licensed plumber maps existing pipe routes (using wall-penetrating radar or by logical route tracing), documents all fixtures, identifies riser locations, and prepares a scope of work.",
+          "Isolation and Drain-Down: Building water supply is isolated. All existing pipes are drained from the highest point downward over 2–4 hours.",
+          "Pipe Removal: Old pipes are cut out section by section. In most Saudi villas, this exposes the wall chases used by the original installation.",
+          "New PPR Installation: PPR pipes are run in the same chases wherever possible, reducing civil works. New pipe routes through ceiling voids eliminate wall chasing entirely in some sections.",
+          "Heat-Fusion Welding: Every joint is made with a calibrated fusion welding tool at 260°C. The joint is stronger than the pipe itself — it is a single piece of polypropylene, not a connection.",
+          "Pressure Testing: The completed system is pressurised to 1.5× working pressure (typically 9 bar) for one hour. All joints are visually inspected under pressure. No reinstatement until the test passes.",
+          "Civil Reinstatement and Commissioning: Wall chases are plastered, tiles replaced, and the system is flushed before connection to fixtures."
+        ]
+      },
+      {
+        type: "heading",
+        text: "Cost and Timeline for a Saudi Villa"
+      },
+      {
+        type: "paragraph",
+        text: "For a typical 3-floor, 4-bedroom Saudi villa: full hot and cold supply replacement takes 6–9 working days with a 3-person team. Total cost: SAR 14,000–28,000 depending on building complexity, access, and tile reinstatement scope. While this sounds significant, compare it to the ongoing cost of patch repairs (SAR 500–2,000 per incident, several times per year) and the risk of a catastrophic wall leak that causes structural water damage — which can cost SAR 30,000–80,000 in remediation and renovation."
+      },
+      {
+        type: "callout",
+        text: "Practical Advice: If you are planning any renovation to your Saudi villa that involves opening walls or ceilings — bathroom renovation, kitchen refit, addition of a room — this is the ideal time to replace exposed plumbing sections at minimal additional cost. Combining pipe replacement with an existing renovation project can reduce the total replacement premium to 20–30% of the standalone cost."
+      }
+    ],
+    faq: [
+      {
+        question: "How do I know if my Saudi villa has galvanised steel or PPR pipes?",
+        answer: "Check any visible pipe section — in the pump room, behind the water heater, or at the rooftop tank connections. Galvanised steel pipes are grey-silver metallic, cold to the touch, heavy, and have threaded joints with white PTFE tape or pipe dope visible. CPVC pipes are cream-coloured plastic with solvent-cemented slip joints. PPR pipes are grey or green plastic with heat-fusion welded joints (no visible fitting gap or adhesive). If you are uncertain, a licensed plumber can identify the material within a few minutes."
+      },
+      {
+        question: "Can I live in my villa during PPR pipe replacement?",
+        answer: "Yes, but with disruption. Water supply to the building is interrupted during working hours for 3–5 days during the core installation phase. Most families manage this by timing the work with a short trip or school holiday period. We can also phase the work floor-by-floor, maintaining partial water supply during the project at the cost of a slightly longer total timeline (8–12 working days versus 6–9)."
+      },
+      {
+        question: "Does PPR pipe need a pressure reducer in Saudi Arabia?",
+        answer: "PN20-rated PPR pipe (the standard specification for residential supply) is rated to 20 bar at 20°C and 5 bar at 95°C — well above Saudi municipal supply pressures (2–5 bar). However, if municipal pressure in your area exceeds 5 bar (ask your plumber to measure it), installing a pressure reducer at the incoming supply protects all fixtures, flexible hose connections, and the pipe system from pressure surges. This is good practice regardless of pipe material."
+      }
+    ]
+  },
+
+  {
+    slug: "heat-pump-water-heater-saudi-arabia-2026",
+    title: "Heat Pump Water Heaters in Saudi Arabia: Are They Worth It in 2026?",
+    metaTitle: "Heat Pump Water Heater Saudi Arabia 2026: Cost, COP & Is It Worth It? | Miyar Technical Services",
+    metaDescription: "Complete guide to heat pump water heaters in Saudi Arabia. How COP 4.0 technology cuts water heating electricity by 75%, which brands work best in KSA heat, and whether the investment makes financial sense.",
+    category: "Plumbing",
+    categoryColor: "#3b82f6",
+    date: "June 14, 2026",
+    readTime: "6 min read",
+    excerpt: "A heat pump water heater uses the same physics as your air conditioner — but in reverse — to produce hot water at one-quarter the electricity cost of a conventional electric element. In Saudi Arabia's warm climate, these units operate at peak efficiency year-round, making them the highest-ROI water heating upgrade available.",
+    content: [
+      {
+        type: "paragraph",
+        text: "Most Saudi households are unknowingly paying 4× more than necessary for hot water. A conventional electric storage water heater converts 1 kWh of electricity into exactly 1 kWh of heat — 100% efficiency by definition, but also the theoretical maximum. A heat pump water heater does something remarkable: it moves existing heat from the surrounding air into the water rather than generating new heat. The result is 1 kWh of electricity producing 3.5–4.5 kWh of heat — a Coefficient of Performance (COP) that cuts your water heating bill by 65–75%."
+      },
+      {
+        type: "heading",
+        text: "Why Saudi Arabia Is Ideal for Heat Pump Water Heaters"
+      },
+      {
+        type: "paragraph",
+        text: "Heat pump water heaters extract heat from ambient air. Their COP drops as ambient temperature drops — in cold climates (below 5°C), conventional electric backup heating takes over. Saudi Arabia is almost the perfect climate for heat pump water heaters: ambient temperatures stay above 20°C for approximately 9–10 months per year, and above 30°C for 6–7 months. At 30°C ambient, a quality heat pump achieves COP 4.0+. At 40°C ambient (Saudi summer), COP reaches 4.5–5.0 in some models. There is essentially no season in Saudi Arabia where the heat pump efficiency advantage disappears."
+      },
+      {
+        type: "heading",
+        text: "Financial Analysis: Heat Pump vs Electric Heater in Saudi Arabia"
+      },
+      {
+        type: "list",
+        items: [
+          "Standard Electric Storage Heater (200L): Purchase cost SAR 600–1,200. Annual electricity consumption for a family of 5: 2,400–3,000 kWh. Annual electricity cost at KSA residential tariff: SAR 1,800–2,600.",
+          "Heat Pump Water Heater (200L, COP 4.0): Purchase cost SAR 3,500–6,000. Annual electricity consumption: 600–800 kWh. Annual electricity cost: SAR 450–700.",
+          "Annual Saving: SAR 1,100–1,900 per year. Payback Period: 2.5–4 years. 10-Year Net Saving (after purchase premium): SAR 8,000–15,000.",
+          "Service Life: Heat pump water heaters last 12–15 years vs 7–10 years for conventional electric units. Longer lifespan further improves the financial case."
+        ]
+      },
+      {
+        type: "heading",
+        text: "Best Heat Pump Water Heater Brands for Saudi Arabia"
+      },
+      {
+        type: "list",
+        items: [
+          "Ariston Nuos Primo: Italian-engineered, 80–200L range. COP 3.8 at 20°C rising to 4.5+ at 35°C. Widely available in KSA through Ariston distributors. 2-year comprehensive warranty. SAR 3,800–5,500 installed.",
+          "Midea Heat Pump Water Heater: Chinese manufacturer with strong Saudi distribution. 200–300L models. COP 4.0+ at Saudi ambient temperatures. Good price-performance ratio. SAR 3,200–5,000 installed.",
+          "Daikin Altherma Split Heat Pump: Premium Japanese engineering. Split outdoor/indoor configuration allows installation in apartments without requiring the unit inside the bathroom. COP 4.5+ in Saudi summer. SAR 6,000–9,000 installed.",
+          "Stiebel Eltron WWK 220: German-engineered with excellent build quality. Available via specialty importers in KSA. SAR 5,500–8,000 installed. Best warranty in class (7 years comprehensive)."
+        ]
+      },
+      {
+        type: "heading",
+        text: "Installation Requirements"
+      },
+      {
+        type: "paragraph",
+        text: "Heat pump water heaters require a minimum room volume of approximately 10m³ around the unit to ensure adequate air volume for heat extraction. The unit emits cool, dry air as a by-product — pleasant in a utility room or outdoor installation, but requiring consideration in enclosed spaces. Units can be installed indoors (in a utility room, garage, or bathroom) or outdoors (direct ambient air). Outdoor installation in Saudi Arabia requires an IP55-rated enclosure and shade protection from direct solar radiation on the outdoor heat exchanger coil."
+      },
+      {
+        type: "callout",
+        text: "Ideal Candidate for Heat Pump Water Heater in Saudi Arabia: Any apartment or villa with a utility room, garage, or outdoor space where the unit can be installed, where the existing water heater consumes 150+ kWh/month, and where the property will be occupied for 3+ years. The payback period is short enough that even tenants in long-term rentals benefit — though landlord consent is required for installation."
+      }
+    ],
+    faq: [
+      {
+        question: "Can a heat pump water heater be installed in a Saudi apartment?",
+        answer: "Yes, with planning. The unit requires adequate space (minimum 10m³ room volume) and an air source — either indoor room air in a utility space, or outdoor air via a through-wall duct. Split-type heat pump water heaters (separate indoor tank and outdoor unit, like a split AC) are ideal for Saudi apartments with balconies or exterior walls. Standard all-in-one units work in apartments with large utility rooms or service areas."
+      },
+      {
+        question: "Does the heat pump water heater work during Ramadan pre-dawn demand?",
+        answer: "Yes. Quality heat pump water heaters have a 200L insulated storage tank that can be programmed to heat overnight during off-peak hours (using timed heating mode). Set the unit to run from 11pm to 4am and the tank will be fully heated before the Fajr prayer and Suhoor demand period. The insulated tank maintains water temperature for 8–12 hours with minimal heat loss. Alternatively, use the boost mode (electric element backup) for rapid reheating if same-day demand is higher than expected."
+      },
+      {
+        question: "Is a heat pump water heater noisy in a Saudi home?",
+        answer: "Heat pump water heaters produce a low humming sound (45–55 dB) similar to a refrigerator or small AC unit. This is not disruptive in a utility room or garage, but would be noticeable in a bedroom or living area. Install the unit in a non-bedroom utility space, or choose a split-type unit where the noisy outdoor compressor is mounted outside and only the silent indoor tank is inside the living area. All major brands publish noise ratings — look for units below 50 dB for indoor installation."
+      }
+    ]
+  },
+
+  {
+    slug: "ac-breakdown-summer-saudi-arabia-what-to-do",
+    title: "AC Breakdown in Saudi Summer: Emergency Action Guide for Homeowners",
+    metaTitle: "AC Breakdown Saudi Arabia Summer 2026: Emergency Action Guide | Miyar Technical Services",
+    metaDescription: "What to do when your AC stops working in Saudi Arabia's summer heat. Emergency safety steps, how to identify the fault type, and when to call for emergency AC repair in Riyadh, Jeddah, and Dammam.",
+    category: "AC & HVAC",
+    categoryColor: "#06b6d4",
+    date: "June 17, 2026",
+    readTime: "6 min read",
+    excerpt: "An AC failure in Saudi Arabia between May and September is a genuine health emergency. With outdoor temperatures exceeding 45°C, an unventilated indoor room can reach dangerous heat levels within hours. This step-by-step guide tells you exactly what to do and what not to do when your AC stops working.",
+    content: [
+      {
+        type: "paragraph",
+        text: "Saudi Arabia's summer heat is lethal without adequate cooling. When an AC unit fails in July or August, the indoor temperature of a closed room rises by 2–3°C per hour toward the outdoor ambient temperature. For elderly occupants, young children, or anyone with respiratory or cardiac conditions, this is a medical emergency that requires immediate action. This guide gives you a clear sequence of steps to take from the moment you notice your AC has stopped working."
+      },
+      {
+        type: "heading",
+        text: "Step 1: Immediate Safety Actions (First 10 Minutes)"
+      },
+      {
+        type: "list",
+        items: [
+          "Open all windows and run ceiling fans: In the early hours of a failure, outdoor temperature may be lower than the rising indoor temperature — especially if the failure occurs at night or early morning. Cross-ventilation with fans provides immediate relief.",
+          "Identify your coolest room: Interior rooms (away from exterior walls in direct sun) are always significantly cooler. Move vulnerable family members (elderly, young children, pregnant women) to the most interior room immediately.",
+          "Check circuit breakers: Before calling a technician, check your electrical distribution board. A tripped breaker is the most common cause of sudden total AC failure — and the easiest fix. Reset the relevant breaker (labeled for each AC unit).",
+          "Check the thermostat setting: Verify the thermostat or remote controller is set to cooling mode (not fan-only) and to a temperature below the current room temperature. Remote controller batteries fail silently and appear as AC malfunctions."
+        ]
+      },
+      {
+        type: "heading",
+        text: "Step 2: Diagnose the Failure Type"
+      },
+      {
+        type: "paragraph",
+        text: "Not all AC failures are equal. Understanding which failure category you are dealing with tells you how long you may need to wait for a repair and how to manage in the interim."
+      },
+      {
+        type: "list",
+        items: [
+          "AC is completely off (no lights, no sounds): Likely causes are a tripped breaker, blown fuse in the outdoor unit, or loss of incoming power. Check the breaker first. If breaker trips again immediately on reset, there is an electrical fault — do not keep resetting it. Call a technician.",
+          "AC runs but produces warm air: The most common summer failure. Likely causes: failed capacitor (the most common cause — 40% of all AC service calls), low refrigerant, or blocked condenser coil. These all require a technician but are usually repairable in one visit.",
+          "AC makes loud noise and runs briefly, then stops: Compressor hard-start failure. Often caused by a failed start capacitor — the compressor cannot reach running speed. A relatively quick repair if the capacitor is the issue. Compressor replacement if not.",
+          "AC leaking water inside: Not a cooling failure — likely a blocked condensate drain. The unit will still cool but the water drip will damage flooring and furniture. Turn off the unit to stop the drip and call for a drain clearing service."
+        ]
+      },
+      {
+        type: "heading",
+        text: "Step 3: Managing the Heat While Waiting for Repair"
+      },
+      {
+        type: "list",
+        items: [
+          "Wet towel cooling: Soak towels in cool water and place them in front of a running fan. Evaporative cooling from the towel surface can reduce perceived temperature by 5–8°C.",
+          "Eliminate heat sources: Turn off all lighting (switch to LED if not already — they produce 80% less heat than halogen/incandescent), unplug electronics, and avoid using the oven.",
+          "Cold water bathing: Short cold-water showers or foot baths reduce core body temperature effectively for 20–30 minutes per treatment.",
+          "Neighbours or hotel: If repair cannot be completed within 4–6 hours and vulnerable family members are present, arrange temporary accommodation. This is not an overreaction in Saudi Arabia's summer — heat stroke can develop within 2–3 hours in a closed indoor space above 38°C."
+        ]
+      },
+      {
+        type: "heading",
+        text: "Step 4: When the Technician Arrives"
+      },
+      {
+        type: "paragraph",
+        text: "A reputable AC service technician will arrive with a manifold gauge set, multimeter, capacitor tester, and common spare parts. A professional diagnostic sequence takes 15–30 minutes and should systematically confirm the fault before any parts are replaced. Be cautious of any technician who quotes a compressor replacement without measuring operating pressures and current draw first — compressor failure is the most expensive repair, and it should be confirmed with data, not assumed."
+      },
+      {
+        type: "callout",
+        text: "Annual Maintenance Protects You: The most effective way to avoid summer AC breakdowns in Saudi Arabia is a preventative maintenance contract. Annual maintenance catches failing capacitors, refrigerant pressure issues, and clogged condenser coils before they cause complete system failure — precisely at the worst time of year. Our emergency response time for annual contract customers is 2 hours; without a contract, emergency response may take 4–8 hours during peak summer demand periods."
+      }
+    ],
+    faq: [
+      {
+        question: "What is the fastest way to cool down a room when the AC is broken in Saudi Arabia?",
+        answer: "The most effective immediate measures are: (1) Close curtains and blinds on sun-facing windows — this alone can reduce indoor temperature by 5–8°C, (2) Use wet towels in front of a fan for evaporative cooling, (3) Bring ice from the freezer and sit near it with a fan blowing over the ice, (4) Move to the lowest floor of the building — heat rises, so ground floors are always cooler than upper floors in a failed-AC building."
+      },
+      {
+        question: "How quickly can Miyar Technical Services respond to an emergency AC repair in Riyadh?",
+        answer: "For annual maintenance contract customers, our guaranteed response time is 2 hours during business hours (7am–8pm). For non-contract emergency calls, our average response time in Riyadh is 3–5 hours during peak summer months (June–August), when demand for emergency service is highest. We recommend scheduling an annual maintenance contract before summer season to guarantee priority response access."
+      },
+      {
+        question: "Can a failed capacitor be fixed on the same visit?",
+        answer: "Yes — capacitor replacement is the most common AC repair and the one we resolve fastest. Run and start capacitors are small, inexpensive components (SAR 80–200) that we carry on every service vehicle in the full range of values. If a failed capacitor is confirmed as the only fault, the repair is typically completed within 45 minutes of arrival. Our first-visit resolution rate for capacitor faults is 98%."
+      }
+    ]
+  },
+
+  {
+    slug: "solar-system-monitoring-track-roi-saudi-arabia",
+    title: "How to Monitor Your Solar System and Track ROI in Saudi Arabia",
+    metaTitle: "Solar Monitoring & ROI Tracking Saudi Arabia 2026: Huawei FusionSolar Guide | Miyar Technical Services",
+    metaDescription: "How to read your solar monitoring app, identify yield loss from dust or faults, compare actual vs expected generation, and track your real ROI from solar panels in Saudi Arabia.",
+    category: "Solar Energy",
+    categoryColor: "#eab308",
+    date: "June 16, 2026",
+    readTime: "7 min read",
+    excerpt: "Installing solar panels is the beginning, not the end. Without active monitoring, you can lose 15–30% of your annual generation to dust, shading, or inverter issues without ever knowing. This guide teaches you to read your monitoring app, interpret the data, and take action when yields fall below expectations.",
+    content: [
+      {
+        type: "paragraph",
+        text: "Saudi Arabia's solar homeowners are uniquely well-positioned to track their investment: the Huawei FusionSolar, Sungrow iSolarCloud, and SMA Sunny Portal apps provide detailed real-time and historical generation data accessible from your phone. Yet most Saudi solar system owners check their app only when there is an obvious problem — missing the silent yield losses from dust accumulation, a single underperforming string, or gradual inverter derating that can silently cost thousands of riyals in lost generation over a year."
+      },
+      {
+        type: "heading",
+        text: "Understanding Your Solar Monitoring Data"
+      },
+      {
+        type: "list",
+        items: [
+          "Daily Generation (kWh): The total energy your system produced today. For a 10kWp system in Riyadh in summer: expect 50–60 kWh on a clear day. Below 40 kWh on a clear day indicates soiling, shading, or a fault.",
+          "Specific Yield (kWh/kWp/day): Your daily generation divided by your system size in kWp. This normalises for system size — a 5kWp system generating 25 kWh has the same specific yield as a 10kWp system generating 50 kWh (both = 5.0 kWh/kWp). This is the correct metric for tracking performance over time.",
+          "Performance Ratio (PR%): Actual generation divided by theoretically possible generation given actual irradiance. A PR of 75–80% is normal for Saudi Arabia accounting for heat derating, dust, and wiring losses. PR below 70% indicates a problem worth investigating.",
+          "String Current (Amps): Each string of panels reports its current output. A string showing 20–30% lower current than the others indicates a partial shading problem, a failed connection, or a failed panel in that string."
+        ]
+      },
+      {
+        type: "heading",
+        text: "Building Your Monthly Baseline — The Right Way"
+      },
+      {
+        type: "paragraph",
+        text: "Your installer should provide you with a monthly generation estimate table based on the actual PVsyst or PVWatts simulation for your specific location, roof orientation, and system size. This is your baseline. Each month, compare your actual metered generation from the monitoring app against this baseline. A deficit of more than 10% against the seasonal baseline (accounting for actual weather) signals that something is reducing your system's output and should be investigated."
+      },
+      {
+        type: "heading",
+        text: "Common Causes of Generation Shortfalls in Saudi Arabia"
+      },
+      {
+        type: "list",
+        items: [
+          "Dust Soiling (Most Common): Progressive yield loss of 1–2% per day in Riyadh without cleaning. Easily confirmed by comparing generation before and after a cleaning event — if generation jumps 15–25% after cleaning, soiling was the cause. Solution: increase cleaning frequency.",
+          "Inverter Thermal Derating: On days above 45°C ambient with the inverter installed in direct sun, the inverter reduces output to protect itself. If your monitoring shows generation dropping sharply in mid-afternoon on hot days despite high irradiance, move the inverter to a shaded location.",
+          "New Shading: A tree that grew, a new structure on a neighbouring building, or a water tank repositioned. Compare current string current data against the baseline from installation — a new shading pattern appears as reduced morning or afternoon generation on specific strings.",
+          "Failed Panel (Open Circuit): A single panel with a failed junction box connection or broken cell appears as one string producing 30–50% below the other strings of similar length. Thermal imaging during a cleaning visit identifies the failed panel precisely.",
+          "Grid Export Limitation: SEC net metering smart meters cap export at the contracted capacity. If your actual consumption is lower than expected and the system is larger than your load, the net metering cap may be throttling your inverter output. Check the SEC smart meter export figure against your inverter export figure."
+        ]
+      },
+      {
+        type: "heading",
+        text: "Calculating Your Real ROI"
+      },
+      {
+        type: "paragraph",
+        text: "True solar ROI in Saudi Arabia includes: (1) electricity cost avoided by consuming your own solar generation directly, (2) SEC bill credits for exported surplus, and (3) the reduction in demand from the higher-tariff tiers if your villa previously exceeded the 6,000 kWh/month residential threshold. Track your SEC bill each month versus the same month last year (before solar) — the difference, minus any maintenance costs, is your real monthly return. Over 12 months, divide the total return by your system capital cost to get your actual payback period."
+      },
+      {
+        type: "callout",
+        text: "Saudi Solar Monitoring Best Practice: Check your monitoring app every 7 days during peak season (April–September). Set up the alert function in FusionSolar or iSolarCloud to notify you if daily generation drops below 80% of the baseline — this catches major faults immediately. Schedule a professional panel cleaning and system inspection every 30 days during haboob season to maintain peak performance. The combination of regular monitoring and regular cleaning delivers the full ROI your system was designed for."
+      }
+    ],
+    faq: [
+      {
+        question: "How do I know if my solar panels are producing the right amount of electricity in Saudi Arabia?",
+        answer: "Compare your daily specific yield (kWh/kWp) against the PVGis or PVWatts reference data for your city. For Riyadh: expect 5.5–6.5 kWh/kWp/day in summer and 3.5–4.5 kWh/kWp/day in winter (shorter days, lower sun angle). If your system consistently produces 15%+ below the reference value after accounting for cleaning frequency, there is a yield problem worth investigating. Your monitoring app's 'compare' function shows daily yield against the same day last week or last year."
+      },
+      {
+        question: "My Huawei FusionSolar app shows zero generation — what should I check?",
+        answer: "Zero generation in the app typically means: (1) the inverter has lost its Wi-Fi connection to the monitoring platform (check inverter Wi-Fi signal and router connection), (2) the inverter has faulted and shut down — check the inverter display for an error code, (3) the inverter has not been commissioned with the monitoring platform after installation. If the inverter display shows normal operation but FusionSolar shows zero, it is a communication issue, not a generation fault — call your installer for monitoring reconfiguration."
+      },
+      {
+        question: "How do I calculate my solar payback period in Saudi Arabia?",
+        answer: "Payback = Installation cost ÷ Annual saving. Annual saving = (annual generation kWh × average electricity tariff rate you were paying) + (any SEC export credits received). Example: 10kWp system, installation cost SAR 35,000. Annual generation: 19,000 kWh. Average Saudi residential tariff for upper tiers: SAR 1.20/kWh. Annual saving: SAR 22,800. Payback: 35,000 ÷ 22,800 = 1.53 years. Most Saudi 10kWp systems pay back in 1.5–3.0 years depending on consumption patterns and tariff tier."
+      }
+    ]
+  },
 ];
 
 export const blogs: Blog[] = [...generalBlogs, ...cityBlogs];

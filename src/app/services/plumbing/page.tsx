@@ -29,6 +29,37 @@ export default function PlumbingServicePage() {
           </p>
         </header>
 
+        {/* Individual Services */}
+        <section style={{ marginBottom: "56px", paddingBottom: "48px", borderBottom: "1px solid var(--border)" }}>
+          <h2 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "6px", color: "var(--foreground)" }}>Browse Plumbing Services</h2>
+          <p style={{ fontSize: "0.875rem", color: "var(--foreground-muted)", marginBottom: "20px" }}>Select a specific service for detailed information, pricing, and process steps.</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "12px" }}>
+            {[
+              { slug: "leak-detection", label: "Acoustic Leak Detection", note: "No-dig pipe leak finding, thermal imaging, tracer gas" },
+              { slug: "pipe-replacement", label: "PPR Pipe Replacement", note: "50-year-life polypropylene, heat-fusion welded" },
+              { slug: "booster-pump", label: "Booster Pump Installation & Repair", note: "Grundfos, Wilo inverter pumps, dynamo replacement" },
+              { slug: "water-heater", label: "Water Heater Installation & Repair", note: "Electric, solar thermal, and heat pump systems" },
+              { slug: "drain-cleaning", label: "Drain Cleaning & Hydro-Jetting", note: "3,500 PSI jetting, grease removal, CCTV survey" },
+              { slug: "bathroom-fitting", label: "Bathroom & Kitchen Fitting", note: "Taps, showers, WC, bidets, smart bidet seats" },
+            ].map(({ slug, label, note }) => (
+              <a
+                key={slug}
+                href={`/services/plumbing/${slug}`}
+                style={{
+                  display: "flex", flexDirection: "column", gap: "4px",
+                  padding: "16px 18px", border: "1px solid var(--border)",
+                  borderRadius: "var(--radius)", textDecoration: "none",
+                  background: "var(--card-bg)", transition: "border-color 0.2s",
+                  borderLeft: "3px solid #3b82f6",
+                }}
+              >
+                <span style={{ fontWeight: 700, fontSize: "0.9rem", color: "var(--foreground)" }}>{label} →</span>
+                <span style={{ fontSize: "0.775rem", color: "var(--foreground-muted)" }}>{note}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
         {/* Grid Layout */}
         <div className={styles.grid}>
           {/* Main Content */}

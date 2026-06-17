@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { blogs } from "@/data/blogs";
 import { cities } from "@/data/cities";
+import { allServices } from "@/data/services";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://miyartechnicalservices.com";
@@ -49,5 +50,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...routes, ...blogRoutes, ...cityRoutes];
+  // Individual service detail pages
+  const serviceRoutes = allServices.map((s) => ({
+    url: `${baseUrl}/services/${s.category}/${s.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...routes, ...blogRoutes, ...cityRoutes, ...serviceRoutes];
 }
