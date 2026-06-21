@@ -4,7 +4,7 @@ import { blogs } from "@/data/blogs";
 import { PHONE_E164, PHONE_DISPLAY, WHATSAPP_BASE, BASE_URL } from "@/lib/siteConfig";
 
 const SERVICE_STATS = [
-  { label: "Cities Covered", value: "6" },
+  { label: "Cities Covered", value: "14" },
   { label: "Response Time", value: "2h" },
   { label: "Availability", value: "24/7" },
   { label: "Certified Engineers", value: "SEC" },
