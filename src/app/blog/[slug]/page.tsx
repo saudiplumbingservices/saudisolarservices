@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogs, getBlogBySlug } from "@/data/blogs";
 import styles from "./blog.module.css";
+import FaqAccordion from "@/components/FaqAccordion";
 import type { Metadata } from "next";
 import { PHONE_E164, PHONE_DISPLAY, WHATSAPP_BASE, BASE_URL, BUSINESS_NAME } from "@/lib/siteConfig";
 
@@ -204,18 +205,7 @@ export default async function BlogPostPage({ params }: Props) {
             })}
 
             {/* FAQ Section */}
-            <div className={styles.faqSection}>
-              <h2 className={styles.faqTitle}>Frequently Asked Questions</h2>
-              {blog.faq.map((item, idx) => (
-                <div key={idx} className={styles.faqCard}>
-                  <p className={styles.question}>
-                    <span className={styles.qIcon}>Q</span>
-                    {item.question}
-                  </p>
-                  <p className={styles.answer}>{item.answer}</p>
-                </div>
-              ))}
-            </div>
+            <FaqAccordion items={blog.faq} accentColor={blog.categoryColor} />
 
             {/* CTA at bottom of article */}
             <div style={{
