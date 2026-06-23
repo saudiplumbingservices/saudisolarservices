@@ -16,9 +16,12 @@ export interface Blog {
 }
 
 interface BlogSection {
-  type: "paragraph" | "heading" | "subheading" | "list" | "callout";
+  type: "paragraph" | "heading" | "subheading" | "list" | "callout" | "table";
   text?: string;
   items?: string[];
+  tableCaption?: string;
+  headers?: string[];
+  rows?: string[][];
 }
 
 const generalBlogs: Blog[] = [
@@ -1177,7 +1180,7 @@ const generalBlogs: Blog[] = [
     category: "Solar Energy",
     categoryColor: "#eab308",
     date: "June 16, 2026",
-    readTime: "8 min read",
+    readTime: "10 min read",
     excerpt: "Your solar inverter converts DC power from the panels into usable 220V AC electricity — it is the single most performance-critical component in your system. Choosing the wrong inverter for Saudi Arabia's 45°C heat, dusty environment, and SEC grid requirements costs you 10–20% of annual yield and thousands in early replacement costs.",
     content: [
       {
@@ -1200,11 +1203,39 @@ const generalBlogs: Blog[] = [
       },
       {
         type: "heading",
+        text: "Huawei vs SMA vs Sungrow — Full Comparison"
+      },
+      {
+        type: "paragraph",
+        text: "The table below compares the three leading inverter brands on every specification that matters for Saudi Arabia installations. Prices are mid-2026 KSA market rates for 5–10 kW residential models."
+      },
+      {
+        type: "table",
+        tableCaption: "Table 1 — Inverter Brand Comparison for Saudi Arabia (2026)",
+        headers: ["Feature", "Huawei SUN2000", "SMA Sunny Boy", "Sungrow SG Series"],
+        rows: [
+          ["Peak Efficiency", "98.6%", "97.8%", "98.4%"],
+          ["Full Output Ambient Temp", "Up to 60 °C", "Up to 55 °C", "Up to 55 °C"],
+          ["MPPT Algorithm", "AI-powered (100×/sec)", "OptiTrac Global Peak", "Standard MPPT"],
+          ["MPPT Channels (5–10 kW)", "2", "1–2", "2"],
+          ["Price Range 5 kW (SAR)", "3,500–4,500", "4,200–5,500", "2,800–3,600"],
+          ["Price Range 10 kW (SAR)", "5,500–6,500", "6,500–7,500", "4,200–5,200"],
+          ["Standard Warranty", "10 years", "5 years", "10 years"],
+          ["Extended Warranty Option", "Up to 20 years", "Up to 20 years", "Up to 20 years"],
+          ["Monitoring App", "FusionSolar", "SMA 360° / Sunny Portal", "iSolarCloud"],
+          ["SEC Compliance (IEC 62116)", "✓ Certified", "✓ Certified", "✓ Certified"],
+          ["KSA Service Centre", "Riyadh + Jeddah", "Riyadh + Jeddah", "Riyadh (distributor)"],
+          ["Battery / Hybrid Model", "SUN2000-M2 series", "SMA Sunny Boy Storage", "SH & SG-EM series"],
+          ["KSA Recommendation", "★★★★★ Best overall", "★★★★ Premium pick", "★★★★ Best value"]
+        ]
+      },
+      {
+        type: "heading",
         text: "Huawei SUN2000 — Best Overall for Saudi Arabia"
       },
       {
         type: "paragraph",
-        text: "Huawei's SUN2000 series (KTL-L1, KTL-M1, KTL-M3) dominates the Saudi residential and commercial solar market for good reason. The SUN2000 integrates an AI-powered maximum power point tracking algorithm that adapts to rapidly changing Saudi irradiance conditions (cloud edges, dust haze) 100 times per second — compared to 10–50 times for conventional MPPT. Operating temperature: full output up to 60°C ambient. Efficiency: 98.6% peak, 97.9% CNA (Californian Energy Commission weighted, relevant for variable-irradiance days). FusionSolar monitoring app is genuinely excellent — real-time panel-level data without requiring power optimisers. SAR price range: SAR 3,500–6,500 for 5–10kW residential models."
+        text: "Huawei's SUN2000 series dominates the Saudi residential and commercial solar market for good reason. The SUN2000 integrates an AI-powered maximum power point tracking algorithm that adapts to rapidly changing Saudi irradiance conditions (cloud edges, dust haze) 100 times per second — compared to 10–50 times for conventional MPPT. Operating temperature: full output up to 60°C ambient. Efficiency: 98.6% peak. FusionSolar monitoring app provides real-time panel-level data without requiring power optimisers. SAR price range: SAR 3,500–6,500 for 5–10kW residential models."
       },
       {
         type: "heading",
@@ -1212,7 +1243,7 @@ const generalBlogs: Blog[] = [
       },
       {
         type: "paragraph",
-        text: "SMA is the German engineering benchmark for solar inverters globally. The Sunny Boy series has a decades-long track record in the Middle East. Key strength: the OptiTrac Global Peak MPPT algorithm handles shaded strings exceptionally well — relevant for Saudi rooftops where building parapets or water tanks create partial shading. SMA's 5-year warranty (extendable to 20 years) and authorised service centres in Riyadh and Jeddah provide strong long-term support. SAR price: SAR 4,200–7,500 for 5–10kW models. For homeowners who prioritise warranty and service network depth over price, SMA is the premium choice."
+        text: "SMA is the German engineering benchmark for solar inverters globally. The Sunny Boy series has a decades-long track record in the Middle East. Key strength: the OptiTrac Global Peak MPPT algorithm handles shaded strings exceptionally well — relevant for Saudi rooftops where building parapets or water tanks create partial shading. SMA's 5-year warranty (extendable to 20 years) and authorised service centres in Riyadh and Jeddah provide strong long-term support. SAR price: SAR 4,200–7,500 for 5–10kW models."
       },
       {
         type: "heading",
@@ -1220,25 +1251,86 @@ const generalBlogs: Blog[] = [
       },
       {
         type: "paragraph",
-        text: "Sungrow is China's largest inverter manufacturer and the second-largest globally. Their SG series (SG5RS, SG10RS) offers peak efficiency of 98.4% at a price point 20–30% below SMA and 10–20% below Huawei. Full output maintained to 55°C ambient. The iSolarCloud monitoring platform is functional but slightly less user-friendly than Huawei's FusionSolar. Sungrow has an authorised distributor in KSA with reasonable warranty response times. SAR price: SAR 2,800–5,200 for 5–10kW models. For budget-conscious installations where maximum performance per riyal is the goal, Sungrow delivers excellent ROI."
+        text: "Sungrow is China's largest inverter manufacturer and the second-largest globally. Their SG series offers peak efficiency of 98.4% at a price point 20–30% below SMA and 10–20% below Huawei. Full output maintained to 55°C ambient. The iSolarCloud monitoring platform is functional but slightly less polished than Huawei's FusionSolar. SAR price: SAR 2,800–5,200 for 5–10kW models. For budget-conscious installations where maximum performance per riyal is the goal, Sungrow delivers excellent ROI."
+      },
+      {
+        type: "heading",
+        text: "System Size vs Expected Savings — Saudi Arabia"
+      },
+      {
+        type: "paragraph",
+        text: "Use this table to estimate the right system size for your villa based on your monthly bill. Yields assume Riyadh's 7.0 kWh/m²/day irradiance. Coastal cities (Jeddah, Dammam) produce approximately 10% less; Abha and Taif produce 15–20% less but at much higher efficiency due to cooler panels."
+      },
+      {
+        type: "table",
+        tableCaption: "Table 2 — Solar System Size vs Investment & Savings (Riyadh, 2026 SEC tariffs)",
+        headers: ["System Size", "Installed Cost (SAR)", "Annual Generation (kWh)", "Annual Saving (SAR)", "Simple Payback"],
+        rows: [
+          ["5 kWp", "18,000–22,000", "8,500–9,500", "3,400–3,800", "5–6 years"],
+          ["8 kWp", "26,000–32,000", "13,500–15,000", "5,400–6,000", "4.5–5.5 years"],
+          ["10 kWp", "30,000–38,000", "17,000–19,000", "6,800–7,600", "4–5 years"],
+          ["15 kWp", "42,000–52,000", "25,500–28,500", "10,200–11,400", "4–5 years"],
+          ["20 kWp", "55,000–68,000", "34,000–38,000", "13,600–15,200", "4–4.5 years"],
+          ["30 kWp (commercial)", "75,000–95,000", "51,000–57,000", "20,400–22,800", "3.5–4.5 years"]
+        ]
+      },
+      {
+        type: "heading",
+        text: "Solar Performance by Saudi City"
+      },
+      {
+        type: "paragraph",
+        text: "Your city's climate determines how much power your inverter and panels produce annually. The table below shows the key performance drivers across Saudi Arabia's major cities."
+      },
+      {
+        type: "table",
+        tableCaption: "Table 3 — Solar Performance by Saudi City (10 kWp System, 2026)",
+        headers: ["City", "Annual Irradiance", "Annual Yield (10 kWp)", "Inverter Heat Challenge", "Cleaning Frequency"],
+        rows: [
+          ["Riyadh", "7.0 kWh/m²/day", "18,000–20,000 kWh", "High — 46 °C peak", "Twice/month"],
+          ["Jeddah", "6.3 kWh/m²/day", "16,000–18,000 kWh", "High — 42 °C + salt air", "Twice/month"],
+          ["Dammam", "6.2 kWh/m²/day", "15,500–17,500 kWh", "High — 44 °C + humidity", "Twice/month"],
+          ["Tabuk", "6.5 kWh/m²/day", "17,000–19,000 kWh", "High — 45 °C dry", "Monthly"],
+          ["Ha'il", "6.8 kWh/m²/day", "17,500–19,500 kWh", "High — 46 °C dry", "Monthly"],
+          ["Buraydah", "6.7 kWh/m²/day", "17,000–19,000 kWh", "High — 46 °C", "Twice/month"],
+          ["Taif", "5.8 kWh/m²/day", "15,500–17,000 kWh", "Low — 35 °C max", "Monthly"],
+          ["Abha", "5.5 kWh/m²/day", "14,500–16,000 kWh", "Very low — 27 °C", "Monthly (rain helps)"],
+          ["Khamis Mushait", "5.5 kWh/m²/day", "14,500–16,000 kWh", "Very low — 28 °C", "Monthly (rain helps)"]
+        ]
       },
       {
         type: "callout",
-        text: "Our Saudi Market Recommendation: For residential systems under 10kWp with SEC net metering, specify Huawei SUN2000-6KTL-M1 or SUN2000-10KTL-M1. The AI MPPT, FusionSolar monitoring, and full-output high-ambient performance justify the modest premium over Sungrow. For commercial systems over 25kWp, SMA Sunny Tripower for its superior partial-shading performance and 20-year warranty extension."
+        text: "Our Saudi Market Recommendation: For residential systems under 10 kWp with SEC net metering, specify Huawei SUN2000-6KTL-M1 or SUN2000-10KTL-M1. The AI MPPT, FusionSolar monitoring, and full-output high-ambient performance justify the modest premium over Sungrow. For commercial systems over 25 kWp, SMA Sunny Tripower for its superior partial-shading performance and 20-year warranty extension."
       }
     ],
     faq: [
       {
         question: "How long do solar inverters last in Saudi Arabia's heat?",
-        answer: "Quality inverters (Huawei, SMA, Sungrow) have rated lifespans of 10–15 years. In Saudi Arabia, the main failure risk is electrolytic capacitor degradation accelerated by sustained high temperatures. Fanless models with pure passive cooling last longer than fan-cooled models in dusty environments. Installing the inverter in a shaded, ventilated location (not on a south-facing wall in direct sun) significantly extends lifespan — we have seen correctly installed Huawei and SMA inverters running 12+ years without issues in Riyadh."
+        answer: "Quality inverters (Huawei, SMA, Sungrow) have rated lifespans of 10–15 years. In Saudi Arabia, the main failure risk is electrolytic capacitor degradation accelerated by sustained high temperatures. Fanless models with pure passive cooling last longer than fan-cooled models in dusty environments. Installing the inverter in a shaded, ventilated location — not on a south-facing wall in direct sun — significantly extends lifespan. We have seen correctly installed Huawei and SMA inverters running 12+ years without issues in Riyadh."
       },
       {
         question: "Should I choose a string inverter or a hybrid inverter for my Saudi villa?",
-        answer: "Choose a hybrid inverter (Huawei SUN2000-M2, Sungrow SH, GoodWe ET) if you plan to add battery storage now or in the future — it eliminates the need for a separate battery inverter. Choose a standard string inverter if you are installing purely for grid-tied net metering with no battery plans. String inverters are slightly more efficient and less expensive. In Saudi Arabia, battery payback periods are currently 8–12 years, so most residential installations start with a standard inverter and decide on battery later."
+        answer: "Choose a hybrid inverter (Huawei SUN2000-M2, Sungrow SH series, GoodWe ET) if you plan to add battery storage now or in the future — it eliminates the need for a separate battery inverter. Choose a standard string inverter if you are installing purely for grid-tied net metering with no battery plans. String inverters are slightly more efficient and less expensive. In Saudi Arabia, battery payback periods are currently 8–12 years, so most residential installations start with a standard inverter and add battery later."
       },
       {
         question: "Does the SEC require specific inverter certifications for net metering?",
-        answer: "Yes. SEC requires inverters to meet IEC 62116 (anti-islanding protection), IEC 61683 (efficiency measurement), and CE or SASO certification. All major inverters from Huawei, SMA, Sungrow, Fronius, and SolarEdge meet these requirements. Generic Chinese inverters from unknown manufacturers frequently do not — leading to application rejection. Always verify SEC approval status with your installer before purchasing."
+        answer: "Yes. SEC requires inverters to meet IEC 62116 (anti-islanding protection), IEC 61683 (efficiency measurement), and CE or SASO certification. All major inverters from Huawei, SMA, Sungrow, Fronius, and SolarEdge meet these requirements. Generic inverters from unknown manufacturers frequently do not — leading to application rejection. Always verify SEC approval status with your installer before purchasing."
+      },
+      {
+        question: "Can I install a solar inverter outdoors in Saudi Arabia?",
+        answer: "It is technically possible if the unit is IP65-rated, but strongly not recommended for Saudi conditions. Outdoor inverters face direct sun exposure that raises ambient temperature by 10–15°C above air temperature, pushing an already-stressed component into thermal derating territory during the peak generation hours of 10am–3pm. Additionally, dust accumulation on the inverter casing impedes heat dissipation. Best practice in KSA: install in a shaded equipment room, a ventilated external cabinet facing north, or under a roof overhang. This alone can extend inverter lifespan by 3–5 years."
+      },
+      {
+        question: "What happens to my solar system during a grid power outage?",
+        answer: "With a standard grid-tied inverter (no battery), the system shuts down automatically the moment the grid fails — this is mandatory anti-islanding protection required by IEC 62116 and SEC. Your panels produce nothing during the outage even in full sunshine. With a hybrid inverter and battery, the system switches to island mode within milliseconds, powering essential loads from battery + solar while the grid is down. This is the key reason homeowners add battery storage in KSA — grid outages, though infrequent, do occur during peak summer demand events."
+      },
+      {
+        question: "How do I know if my inverter is underperforming in Saudi Arabia?",
+        answer: "Compare your daily generation (kWh) against the expected yield for your system size and city — a correctly sized 10 kWp system in Riyadh should generate 45–55 kWh on a clear summer day. If you consistently see 30–35 kWh on clear days, the system is losing 30–40% of potential yield. Common causes in Saudi Arabia: dust-covered panels (most common — check physical condition first), inverter thermal derating due to incorrect installation location, partial shading from new structures, or a failing MPPT tracker. Huawei's FusionSolar and Sungrow's iSolarCloud both allow you to check string-level performance from your phone to isolate the issue."
+      },
+      {
+        question: "Is Huawei really better than SMA for Saudi Arabia — or is it just cheaper?",
+        answer: "Huawei is not simply cheaper — it is genuinely technically superior in two areas critical for KSA: (1) the AI MPPT algorithm samples 100 times per second versus 10–50 for conventional MPPT, delivering 1–3% more annual yield in Saudi Arabia's variable-irradiance environment; (2) the 60°C full-output ambient rating versus SMA's 55°C is directly relevant for Riyadh, Buraydah, and Ha'il summer temperatures. SMA retains advantages in partial-shading performance (OptiTrac algorithm) and European warranty support infrastructure. For an unshaded Riyadh rooftop, Huawei wins on technical merits. For a complex shaded rooftop or a client who values European brand assurance, SMA remains a strong choice."
       }
     ]
   },

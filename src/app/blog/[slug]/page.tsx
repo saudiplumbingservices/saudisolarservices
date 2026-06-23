@@ -171,6 +171,35 @@ export default async function BlogPostPage({ params }: Props) {
                   </div>
                 );
               }
+              if (section.type === "table" && section.headers && section.rows) {
+                return (
+                  <figure key={idx} className={styles.tableWrapper}>
+                    <div className={styles.tableScroll}>
+                      <table className={styles.table}>
+                        <thead>
+                          <tr>
+                            {section.headers.map((h, i) => (
+                              <th key={i} className={styles.th}>{h}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {section.rows.map((row, ri) => (
+                            <tr key={ri} className={ri % 2 === 0 ? styles.trEven : styles.trOdd}>
+                              {row.map((cell, ci) => (
+                                <td key={ci} className={`${styles.td} ${ci === 0 ? styles.tdLabel : ""}`}>{cell}</td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    {section.tableCaption && (
+                      <figcaption className={styles.tableCaption}>{section.tableCaption}</figcaption>
+                    )}
+                  </figure>
+                );
+              }
               return null;
             })}
 
