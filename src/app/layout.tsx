@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import AnnouncementBar from "@/components/AnnouncementBar";
+import PopupModal from "@/components/PopupModal";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -62,9 +62,9 @@ export default function RootLayout({
     <html lang="en" className={`${plusJakartaSans.variable} ${inter.variable}`}>
       <body suppressHydrationWarning>
         <SchemaMarkup />
-        <AnnouncementBar />
+        <PopupModal />
         <Navbar />
-        <div style={{ paddingTop: "116px" }}>
+        <div style={{ paddingTop: "72px" }}>
           {children}
         </div>
         <Footer />

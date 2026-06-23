@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  top: 44px; /* announcement bar height */
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
@@ -226,10 +226,6 @@
 /* ── Responsive ───────────────────────────────────────── */
 
 @media (max-width: 991px) {
-  .header {
-    top: 0; /* on mobile, announcement bar stacks above so no offset needed */
-  }
-
   .navMenu {
     position: fixed;
     top: 72px;
