@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import SchemaMarkup from "@/components/SchemaMarkup";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -17,7 +20,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Professional AC, Plumbing & Solar Services in Saudi Arabia | Miyar Technical Services",
-  description: "Expert HVAC/AC repairs, plumbing maintenance, and solar panel installation services across Saudi Arabia. Available 24/7. Get a free quote today!",
+  description: "Expert HVAC/AC repairs, plumbing maintenance, and solar panel installation services across 14 cities in Saudi Arabia. Available 24/7. Get a free quote today!",
   keywords: [
     "AC service Saudi Arabia",
     "Plumbing service Saudi",
@@ -33,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://miyartechnicalservices.com",
     siteName: "Miyar Technical Services",
     title: "Professional AC, Plumbing & Solar Services in Saudi Arabia | Miyar Technical Services",
-    description: "Expert HVAC/AC repairs, plumbing maintenance, and solar panel installation services across Saudi Arabia. Available 24/7. Get a free quote today!",
+    description: "Expert HVAC/AC repairs, plumbing maintenance, and solar panel installation services across 14 cities in Saudi Arabia. Available 24/7. Get a free quote today!",
     images: [
       {
         url: "https://miyartechnicalservices.com/hero-bg.png",
@@ -59,7 +62,12 @@ export default function RootLayout({
     <html lang="en" className={`${plusJakartaSans.variable} ${inter.variable}`}>
       <body suppressHydrationWarning>
         <SchemaMarkup />
-        {children}
+        <AnnouncementBar />
+        <Navbar />
+        <div style={{ paddingTop: "116px" }}>
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );

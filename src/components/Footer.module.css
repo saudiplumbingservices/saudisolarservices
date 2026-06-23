@@ -1,31 +1,35 @@
 .footer {
-  background-color: var(--background-card);
+  background: var(--background-card);
   color: var(--foreground);
   border-top: 1px solid var(--border);
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding-top: 72px;
+  padding-bottom: 0;
+  margin-top: 80px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.6fr 1.1fr 1.2fr 1fr;
   gap: 48px;
-  margin-bottom: 60px;
+  padding-bottom: 56px;
 }
+
+/* ── Brand Column ─────────────────────────────────────── */
 
 .brandCol {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 800;
+  color: var(--primary-light);
 }
 
 .logoText {
@@ -35,22 +39,93 @@
   background-clip: text;
 }
 
-.logoIcon {
-  color: var(--primary-light);
+.logoSub {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground-muted);
+  -webkit-text-fill-color: unset;
 }
 
 .brandDesc {
   color: var(--foreground-muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.875rem;
+  line-height: 1.7;
 }
 
-.colTitle {
-  font-size: 1.1rem;
+.licenseRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 0.72rem;
+  background: var(--background);
+  color: var(--foreground-muted);
+  border: 1px solid var(--border);
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.contactBtns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.waBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #25d366;
+  color: #ffffff;
+  font-size: 0.8rem;
   font-weight: 700;
-  margin-bottom: 24px;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.waBtn:hover {
+  background: #1da851;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+.callBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--primary-light);
+  color: var(--primary-light);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.callBtn:hover {
+  background: var(--primary-light);
+  color: #fff;
+}
+
+/* ── Column headings ──────────────────────────────────── */
+
+.colTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--foreground);
+  margin-bottom: 20px;
   position: relative;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
 }
 
 .colTitle::after {
@@ -58,102 +133,157 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 30px;
+  width: 28px;
   height: 2px;
-  background-color: var(--primary-light);
+  background: var(--primary-light);
+  border-radius: 2px;
 }
+
+/* ── Link lists ───────────────────────────────────────── */
 
 .linkList {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 .link {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--foreground-muted);
-  transition: all var(--transition-fast);
+  text-decoration: none;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
 }
 
 .link:hover {
   color: var(--foreground);
-  transform: translateX(4px);
+  padding-left: 4px;
 }
 
+/* ── Cities grid ──────────────────────────────────────── */
+
+.cityGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+  margin-bottom: 14px;
+}
+
+.allCitiesLink {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.allCitiesLink:hover {
+  opacity: 0.75;
+}
+
+/* ── Contact column ───────────────────────────────────── */
+
 .contactText {
-  font-size: 0.9rem;
-  color: var(--foreground-muted);
-  line-height: 1.6;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.licenseRow {
+.contactItem {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--foreground-muted);
+  line-height: 1.5;
 }
 
-.badge {
-  font-size: 0.75rem;
-  background-color: var(--background);
-  color: var(--foreground-muted);
-  border: 1px solid var(--border);
-  padding: 4px 8px;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
+.contactItem svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--primary-light);
 }
+
+.contactLink {
+  color: var(--primary-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.15s;
+}
+
+.contactLink:hover {
+  opacity: 0.75;
+}
+
+/* ── Bottom Bar ───────────────────────────────────────── */
 
 .bottomBar {
   border-top: 1px solid var(--border);
-  padding-top: 30px;
+  padding: 22px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 16px;
 }
 
 .copyright {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--foreground-muted);
 }
 
 .bottomLinks {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   list-style: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .bottomLink {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--foreground-muted);
-  transition: color var(--transition-fast);
+  text-decoration: none;
+  transition: color 0.15s;
 }
 
 .bottomLink:hover {
   color: var(--foreground);
 }
 
-/* Responsiveness */
-@media (max-width: 991px) {
+/* ── Responsive ───────────────────────────────────────── */
+
+@media (max-width: 1100px) {
   .grid {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 36px;
   }
-  
+
+  .footer {
+    margin-top: 48px;
+  }
+
   .bottomBar {
     flex-direction: column;
     text-align: center;
+  }
+
+  .bottomLinks {
+    justify-content: center;
   }
 }

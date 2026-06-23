@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 140px; /* Offset fixed header */
+  padding-top: 48px;
   padding-bottom: 80px;
   background-image: linear-gradient(rgba(10, 12, 16, 0.75), rgba(10, 12, 16, 0.85)), url('/hero-bg.png');
   background-size: cover;
