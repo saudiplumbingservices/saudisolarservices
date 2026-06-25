@@ -46,10 +46,16 @@ export default function QuoteForm() {
     return `${WHATSAPP_BASE}?text=${encodeURIComponent(baseText)}`;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Open WhatsApp with the enquiry so the business actually receives it
+    // Send email via Resend (fire-and-forget — don't block WhatsApp)
+    fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    }).catch(() => {}); // silent fail — WhatsApp is the reliable fallback
+    // Open WhatsApp so the business receives it immediately
     window.open(generateWhatsAppLink(), "_blank", "noopener,noreferrer");
     setLoading(false);
     setSuccess(true);
@@ -174,7 +180,15 @@ export default function QuoteForm() {
                       <option value="Dammam">Dammam</option>
                       <option value="Mecca">Mecca</option>
                       <option value="Medina">Medina</option>
-                      <option value="Khobar">Khobar</option>
+                      <option value="Al Khobar">Al Khobar</option>
+                      <option value="Taif">Taif</option>
+                      <option value="Tabuk">Tabuk</option>
+                      <option value="Abha">Abha</option>
+                      <option value="Jubail">Jubail</option>
+                      <option value="Yanbu">Yanbu</option>
+                      <option value="Buraydah">Buraydah</option>
+                      <option value="Khamis Mushait">Khamis Mushait</option>
+                      <option value="Ha'il">Ha&apos;il</option>
                     </select>
                   </div>
                   <div className={styles.formGroup}>
