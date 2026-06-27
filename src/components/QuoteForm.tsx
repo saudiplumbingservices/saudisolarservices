@@ -8,6 +8,7 @@ export default function QuoteForm() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    email: "",
     city: "Riyadh",
     service: "AC Installation & Repair",
     message: "",
@@ -65,6 +66,7 @@ export default function QuoteForm() {
     setFormData({
       name: "",
       phone: "",
+      email: "",
       city: "Riyadh",
       service: "AC Installation & Repair",
       message: "",
@@ -163,6 +165,19 @@ export default function QuoteForm() {
                       onChange={handleChange}
                     />
                   </div>
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label htmlFor="email" className={styles.label}>Email Address <span style={{ color: "var(--foreground-muted)", fontWeight: 400 }}>(optional — for confirmation)</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="e.g. your@email.com"
+                    className={styles.input}
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
                 </div>
 
                 <div className={styles.formRow}>

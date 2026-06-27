@@ -222,6 +222,14 @@
   opacity: 0.75;
 }
 
+/* ── Newsletter Strip ─────────────────────────────────── */
+
+.newsletterStrip {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  max-width: 520px;
+}
+
 /* ── Bottom Bar ───────────────────────────────────────── */
 
 .bottomBar {

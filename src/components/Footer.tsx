@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
 import { PHONE_E164, PHONE_DISPLAY, WHATSAPP_BASE } from "@/lib/siteConfig";
+import NewsletterForm from "./NewsletterForm";
 
 export default function Footer() {
   return (
@@ -130,6 +131,11 @@ export default function Footer() {
           </div>
         </div>
 
+      </div>
+
+      {/* Newsletter strip */}
+      <div className={`${styles.newsletterStrip} container`}>
+        <NewsletterForm source="footer" compact />
       </div>
 
       {/* Bottom Bar */}

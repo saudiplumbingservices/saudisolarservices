@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { blogs, getBlogBySlug } from "@/data/blogs";
 import styles from "./blog.module.css";
 import FaqAccordion from "@/components/FaqAccordion";
+import NewsletterForm from "@/components/NewsletterForm";
 import type { Metadata } from "next";
 import { PHONE_E164, PHONE_DISPLAY, WHATSAPP_BASE, BASE_URL, BUSINESS_NAME } from "@/lib/siteConfig";
 
@@ -203,6 +204,11 @@ export default async function BlogPostPage({ params }: Props) {
               }
               return null;
             })}
+
+            {/* Newsletter signup */}
+            <div style={{ marginTop: "48px" }}>
+              <NewsletterForm source={`blog-${blog.slug}`} />
+            </div>
 
             {/* FAQ Section */}
             <FaqAccordion items={blog.faq} accentColor={blog.categoryColor} />
