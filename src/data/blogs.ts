@@ -1660,6 +1660,313 @@ const generalBlogs: Blog[] = [
       }
     ]
   },
+  // ─── NEW RECENTLY WRITTEN BLOGS ──────────────────────────────────────────
+  {
+    slug: "best-ac-repair-services-riyadh",
+    title: "Best AC Repair Services in Riyadh – Fast & Affordable",
+    metaTitle: "Best AC Repair Services in Riyadh: Fast & Affordable HVAC Solutions | Miyar Technical Services",
+    metaDescription: "Looking for the best AC repair in Riyadh? We offer fast, 24/7 emergency split and ducted AC repair, gas refills, and compressor troubleshooting at affordable rates.",
+    category: "AC & HVAC",
+    categoryColor: "#06b6d4",
+    date: "June 28, 2026",
+    readTime: "5 min read",
+    excerpt: "Riyadh summers can push temperatures past 48°C, making a broken air conditioner a true emergency. Find out how to get fast, affordable, and certified AC repair services in Riyadh, and avoid common service traps.",
+    content: [
+      {
+        type: "paragraph",
+        text: "When the outdoor thermometer reads 45°C or higher, air conditioning is not a luxury; it is a critical safety requirement. Riyadh's dry, dust-heavy atmosphere pushes split and ducted HVAC units to their operational limits. When your system breaks down, you need a service provider that is not only fast but understands the specific engineering of systems operating under Saudi desert conditions."
+      },
+      {
+        type: "heading",
+        text: "Common AC Failures in Riyadh and Their Solutions"
+      },
+      {
+        type: "paragraph",
+        text: "The moment an AC stops cooling, it is usually due to one of four main problems. Recognizing them early can save you significant repair costs:"
+      },
+      {
+        type: "list",
+        items: [
+          "Refrigerant Leaks (Freon): Due to high thermal expansion and vibration, copper pipe joints often develop micro-cracks. We perform nitrogen pressure testing to locate the leak before refilling, ensuring a permanent fix.",
+          "Compressor Thermal Lockout: Extreme heat causes condensers to struggle to reject heat, leading to compressor overheating and shutdown. Regular coil cleaning prevents this issue.",
+          "Failed Run Capacitors: The starter capacitors are sensitive to voltage fluctuations and heat. Replacing them is a quick and highly affordable repair that restores cooling instantly.",
+          "Blocked Drain Pipes: High humidity inside causes rapid condensation. When dust mixes with this water, it clogs the drain line, leading to indoor water leakage."
+        ]
+      },
+      {
+        type: "callout",
+        text: "Pro Dispatcher Alert: If your AC is running but blowing warm air, turn it off immediately. Running a refrigerant-starved or dirt-clogged compressor will cause permanent thermal failure, turning a SAR 150 capacitor or gas fix into a SAR 1,500 compressor replacement."
+      },
+      {
+        type: "heading",
+        text: "Understanding AC Repair Pricing in Riyadh"
+      },
+      {
+        type: "table",
+        tableCaption: "Average HVAC repair costs in Riyadh (SAR)",
+        headers: ["Service Type", "Average Price Range (SAR)", "Typical Duration"],
+        rows: [
+          ["General Inspection & Diagnostics", "100 - 150", "30 - 45 mins"],
+          ["Split AC Chemical Wash & Clean", "150 - 250", "1 hour"],
+          ["Freon Gas Refill (R410A / R22)", "200 - 450", "45 mins"],
+          ["Capacitor / Contactor Replacement", "150 - 300", "30 mins"],
+          ["Compressor Replacement (1.5 - 2 Ton)", "900 - 1800", "2 - 3 hours"]
+        ]
+      },
+      {
+        type: "heading",
+        text: "Why Miyar Technical Services is Riyadh's Top Choice"
+      },
+      {
+        type: "paragraph",
+        text: "We offer transparent, upfront pricing with no hidden charges, certified technicians, and a service warranty on all spare parts. With mobile dispatch units distributed across North, South, East, and West Riyadh, we guarantee a rapid response time for AC emergencies."
+      }
+    ],
+    faq: [
+      {
+        question: "Why is my AC blowing warm air in Riyadh?",
+        answer: "This is usually caused by either a refrigerant leak, a failed starter capacitor, or a heavily clogged outdoor condenser coil. Turn off the unit and call a certified HVAC technician to diagnose the electrical and chemical pressure lines."
+      },
+      {
+        question: "How much does AC gas refilling cost in Riyadh?",
+        answer: "Refrigerant top-ups and full refills typically cost between SAR 200 and SAR 450 depending on the tonnage of the unit and the type of gas required (R410A is standard for modern units, while older systems use R22)."
+      }
+    ]
+  },
+  {
+    slug: "professional-ac-installation-saudi-arabia",
+    title: "Professional AC Installation Services in Saudi Arabia",
+    metaTitle: "Professional AC Installation Services in Saudi Arabia | Miyar Technical Services",
+    metaDescription: "Need professional AC installation in Saudi Arabia? Learn how correct sizing, positioning, and vacuuming save up to 30% on electric bills and double system life.",
+    category: "AC & HVAC",
+    categoryColor: "#06b6d4",
+    date: "June 28, 2026",
+    readTime: "6 min read",
+    excerpt: "An incorrectly installed air conditioner will consume up to 30% more electricity and fail within half its designed lifespan. Discover what professional AC installation entails under SASO guidelines in KSA.",
+    content: [
+      {
+        type: "paragraph",
+        text: "In Saudi Arabia, air conditioning accounts for over 65% of a typical household's annual electricity expenditure. While buying a high-efficiency inverter unit (SASO 4-star or higher) is a great step, its efficiency is completely dependent on the quality of its installation. Professional installation is what ensures the system meets its SEER (Seasonal Energy Efficiency Ratio) ratings."
+      },
+      {
+        type: "heading",
+        text: "Key Factors in Professional AC Installation"
+      },
+      {
+        type: "list",
+        items: [
+          "Correct Tonnage Calculation: Do not guess sizing. We calculate room volume, window exposure, insulation levels, and local ambient temperatures to determine if you need a 1.5, 2.0, or 2.5-ton unit.",
+          "Proper Evacuating (Vacuum Pump): Before charging refrigerant, the copper lines must be vacuumed to below 500 microns to remove air and moisture. Skipping this step causes acid formation that eats the compressor motor.",
+          "Outdoor Unit Placement: Outdoor condensers must have at least 30cm of rear clearance and should be shielded from direct afternoon sunlight where possible to optimize heat rejection.",
+          "Proper Drainage Slope: Condensate drain pipes must maintain a downward slope of at least 1:50 to prevent standing water, mold growth, and indoor water leaks."
+        ]
+      },
+      {
+        type: "callout",
+        text: "SASO Standard Tip: Always verify that your installer uses high-quality seamless copper tubing (minimum wall thickness of 0.8mm) wrapped in high-density elastomeric insulation. Substandard tubing leads to early leaks and efficiency loss."
+      },
+      {
+        type: "heading",
+        text: "Different AC Systems and Installation Demands"
+      },
+      {
+        type: "paragraph",
+        text: "Whether you are setting up split systems, ducted splits, package units, or variable refrigerant flow (VRF) systems, each has unique structural requirements. Ducted systems require precise duct layout and static pressure calculation, while VRF setups require certified brazing and nitrogen purging to protect electronic expansion valves."
+      }
+    ],
+    faq: [
+      {
+        question: "Can I install a split AC myself?",
+        answer: "No. AC installation in Saudi Arabia requires specialized tools such as a vacuum pump, manifold gauges, flaring tools, and electrical testing equipment. Improper installation voids manufacturer warranties and risks electrical fires or early compressor burnout."
+      },
+      {
+        question: "What is the standard sizing rule for rooms in KSA?",
+        answer: "As a general rule of thumb for Saudi climates, you need approximately 12,000 BTU (1 Ton) for every 15-18 square meters of standard residential space. Rooms with high ceilings or large windows facing west may require higher tonnage."
+      }
+    ]
+  },
+  {
+    slug: "water-leak-detection-repair-services",
+    title: "Water Leak Detection & Repair Services",
+    metaTitle: "Water Leak Detection & Repair Services in Saudi Arabia | Miyar Technical Services",
+    metaDescription: "Detect hidden water leaks without breaking walls. Learn how acoustic sensors and thermal cameras locate leaks, and how Miyar Technical Services saves your property.",
+    category: "Plumbing",
+    categoryColor: "#3b82f6",
+    date: "June 28, 2026",
+    readTime: "5 min read",
+    excerpt: "A hidden water leak can inflate your water bill by thousands of SAR and undermine your villa's foundation. Learn how modern acoustic and thermal detection technologies locate hidden leaks without destruction.",
+    content: [
+      {
+        type: "paragraph",
+        text: "Water is a precious commodity in Saudi Arabia, and residential water supply is highly regulated. A single pinhole leak in an underground pipe or behind bathroom tiles can waste over 3,000 liters of water daily. Often, these leaks remain hidden for months, only making themselves known through a sudden surge in the National Water Company (NWC) bill or structural dampness in concrete walls."
+      },
+      {
+        type: "heading",
+        text: "How Modern Non-Destructive Leak Detection Works"
+      },
+      {
+        type: "paragraph",
+        text: "Gone are the days of hacking down walls and digging up entire floors just to find a single leaking joint. We use advanced non-destructive technology to pinpoint the exact location of leaks with centimeter accuracy:"
+      },
+      {
+        type: "list",
+        items: [
+          "Acoustic Leak Detection: High-frequency ground microphones pick up the sound of water escaping under pressure from metal or plastic pipes buried under concrete. This sound is isolated and filtered from background noise.",
+          "Thermal Imaging (Infrared Cameras): Temperature differentials reveal moisture paths. Leaking hot or cold water pipes create thermal footprints behind walls and under floor tiles, visible on infrared cameras.",
+          "Tracer Gas Detection: A safe mixture of nitrogen and hydrogen is injected into empty water lines. Because hydrogen molecules are tiny, they escape through the smallest crack and rise to the surface, where our electronic sensors detect them.",
+          "Digital Pipeline Inspection: Micro-cameras are guided down drainage pipes to inspect joints and detect root intrusions or structural collapses."
+        ]
+      },
+      {
+        type: "callout",
+        text: "NWC High Bill Dispute Tip: If you receive an unexpectedly high water bill in Saudi Arabia, check your main water meter. If it is spinning when all taps and valves are closed, you have a leak. Finding and repairing it professionally allows you to submit a formal objection to NWC along with a Certified Leak Repair Report to adjust the bill."
+      },
+      {
+        type: "heading",
+        text: "Most Common Locations for Leaks"
+      },
+      {
+        type: "table",
+        tableCaption: "Common leaks in residential villas",
+        headers: ["Leak Location", "Primary Cause", "Detection Method", "Destruction Level"],
+        rows: [
+          ["Bathroom Floor Slab", "Failed waterproofing or grout", "Thermal Imaging", "Minimal (re-grouting)"],
+          ["Underground Main Line", "Soil settlement or poor pipe joint", "Acoustic / Tracer Gas", "Local excavation only"],
+          ["Roof/Ceiling", "Rainwater tank leak or failed membrane", "Visual / Moisture Meter", "None"],
+          ["Wall Pipes (PPR/PEX)", "Poor thermal welding or nail puncture", "Acoustic / Thermal", "Single tile removal"]
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "How can I tell if I have a water leak in my villa?",
+        answer: "Look for unexplained wet spots on walls, peeling paint near the floor, a constant sound of running water behind toilets, or a sudden rise in your monthly NWC bill. Another test is checking the water meter overnight when all water usage is turned off."
+      },
+      {
+        question: "Can you find a leak behind concrete walls without breaking them?",
+        answer: "Yes. Using acoustic microphones and thermal imaging cameras, we can pinpoint the leak location behind concrete walls or under floor tiles, allowing us to make a localized repair by removing only a single tile instead of demolishing the entire wall."
+      }
+    ]
+  },
+  {
+    slug: "professional-solar-panel-installation-services",
+    title: "Professional Solar Panel Installation Services",
+    metaTitle: "Professional Solar Panel Installation Services in KSA | Miyar Technical Services",
+    metaDescription: "Transition to solar energy in Saudi Arabia. Learn about SEC net-metering, structural roof evaluations, and professional PV system design for villas.",
+    category: "Solar Energy",
+    categoryColor: "#eab308",
+    date: "June 28, 2026",
+    readTime: "6 min read",
+    excerpt: "Saudi Arabia is leading the renewable transition with its Vision 2030 initiatives. Installing solar panels on your residential or commercial property can slash your electricity bills to near zero. Learn how professional design, SEC Net Metering approvals, and quality engineering make the difference.",
+    content: [
+      {
+        type: "paragraph",
+        text: "With high solar irradiance throughout the year, Saudi Arabia is one of the most optimal countries in the world for solar energy generation. Through the Saudi Electricity Company (SEC) Net Metering framework, homeowners can generate their own clean energy, consume what they need, and export the surplus back to the national grid for bill credits. However, a solar system is a 25-year asset, and its success starts with professional planning and installation."
+      },
+      {
+        type: "heading",
+        text: "Critical Steps in Professional Solar Installation"
+      },
+      {
+        type: "list",
+        items: [
+          "Structural Roof Analysis: Solar panels and their mounting structures add wind and dead load to your roof. We conduct engineering audits to ensure your villa's concrete roof or steel structures can safely support the system.",
+          "SEC Net Metering Approval: You cannot simply connect solar panels to the grid. We manage the entire application process, submitting single-line diagrams, SASO compliance certificates, and coordinating with SEC engineers to replace your meter with a bi-directional smart meter.",
+          "Optimal Azimuth and Tilt Angle: In Saudi Arabia, panels should ideally face true South. We calculate the optimal tilt angle (typically between 20° to 25° for Riyadh and Jeddah) to maximize winter generation when the sun is lower.",
+          "High-Quality Mounting Systems: In coastal areas like Jeddah, Dammam, and Yanbu, mounting systems must be made of anodized aluminum or hot-dip galvanized steel to withstand high humidity and saline corrosion."
+        ]
+      },
+      {
+        type: "callout",
+        text: "Vision 2030 Advantage: By shifting to a hybrid solar grid-tied system, you protect your villa from future residential electricity tariff changes. Additionally, installing solar increases the direct property value of your home on the Saudi real estate market."
+      },
+      {
+        type: "heading",
+        text: "Components of a Premium Solar System"
+      },
+      {
+        type: "paragraph",
+        text: "A standard grid-tied solar setup consists of Tier-1 Monocrystalline PV panels (such as Jinko, Longi, or Trina), a smart grid inverter (such as Huawei FusionSolar or SMA), double-insulated solar cables (4mm² or 6mm² DC cables), and comprehensive AC/DC surge protection devices (SPDs) to shield your system from lightning strikes and grid spikes."
+      }
+    ],
+    faq: [
+      {
+        question: "How does SEC Net Metering work in Saudi Arabia?",
+        answer: "SEC Net Metering allows you to connect your solar system to the national grid. A bi-directional meter measures how much electricity you buy from SEC and how much solar surplus you export to them. At the end of the month, you only pay for the net difference, and any net export is credited to your account."
+      },
+      {
+        question: "How much space do I need on my roof for a 10 kWp solar system?",
+        answer: "A standard 10 kWp residential solar system requires approximately 18 to 22 solar panels (rated around 450W–550W each). This translates to roughly 50 to 60 square meters of unobstructed, shade-free roof space."
+      }
+    ]
+  },
+  {
+    slug: "solar-system-maintenance-repair",
+    title: "Solar System Maintenance & Repair",
+    metaTitle: "Solar System Maintenance & Repair Services KSA | Miyar Technical Services",
+    metaDescription: "Keep your solar panels running at peak efficiency. Learn how dust, inverter faults, and hotspots affect generation, and why professional maintenance is key.",
+    category: "Solar Energy",
+    categoryColor: "#eab308",
+    date: "June 28, 2026",
+    readTime: "6 min read",
+    excerpt: "Sand, dust, and high temperatures are the three biggest enemies of solar panel efficiency in Saudi Arabia. Regular cleaning and electrical audits are crucial to secure your 25-year return on investment.",
+    content: [
+      {
+        type: "paragraph",
+        text: "Solar panels are highly durable, but they are not maintenance-free — especially in the Middle East. Saudi Arabia's frequent dust storms and high ambient temperatures can degrade system performance rapidly. Dust accumulation alone can reduce energy output by up to 30% in just a few weeks. To ensure your system continues to deliver the expected financial returns, a structured maintenance and auditing schedule is essential."
+      },
+      {
+        type: "heading",
+        text: "The Impact of Soiling (Dust & Sand)"
+      },
+      {
+        type: "paragraph",
+        text: "Soiling is the term for dust, dirt, and sand settling on solar panels. The fine desert sand of the Arabian Peninsula forms a thick, sticky layer when combined with morning dew. This blocks sunlight from reaching the silicon cells. Cleaning must be done correctly: using hard tap water can cause calcium deposits (scale) to bake onto the glass, permanently reducing generation. We use demineralized water and specialized soft brushes to clean arrays safely."
+      },
+      {
+        type: "heading",
+        text: "Key Maintenance Checkpoints"
+      },
+      {
+        type: "list",
+        items: [
+          "Inverter Fault Diagnostics: The inverter is the brain of the solar system. We verify error logs, check firmware updates, inspect cooling fans, and audit DC/AC terminal connections.",
+          "Thermal Imaging (Hotspot Detection): We use infrared thermal cameras to scan panels during peak sunlight. Hot spots indicate cracked cells or failing bypass diodes, which can cause micro-fires and destroy the panel.",
+          "DC String Voltage Audits: By measuring open-circuit voltage and short-circuit current on each string, we locate wiring faults or degrading panels that degrade string performance.",
+          "Tightening & Torquing: High wind speeds in Saudi Arabia cause vibrations that can loosen mounting clamps and cable ties. We re-torque all structural and electrical connections."
+        ]
+      },
+      {
+        type: "callout",
+        text: "Solar Maintenance Tip: Never wash solar panels under the hot afternoon sun (11 AM to 3 PM). The cold water hitting the hot glass (which can reach 70°C) causes thermal shock, micro-cracks in the cells, or complete glass breakage. Always clean panels in the early morning or late evening."
+      },
+      {
+        type: "heading",
+        text: "Troubleshooting Common Solar Faults"
+      },
+      {
+        type: "table",
+        tableCaption: "Common solar system issues in KSA",
+        headers: ["Symptom", "Potential Root Cause", "Urgency", "Professional Action"],
+        rows: [
+          ["Daily Generation drops 20%+", "Heavy dust / soiling accumulation", "Medium", "Chemical-free demineralized water wash"],
+          ["Inverter Red Light / No Power", "Grid overvoltage or DC ground fault", "High", "Isolate system, audit string insulation"],
+          ["Inverter app shows offline", "Wi-Fi dongle disconnected / Router change", "Low", "Reconfigure Wi-Fi connection"],
+          ["Single string output is low", "Failing bypass diode or localized shading", "High", "Thermal scan, replace faulty panel/diode"]
+        ]
+      }
+    ],
+    faq: [
+      {
+        question: "How often should I clean my solar panels in Saudi Arabia?",
+        answer: "During the high-dust summer months, we recommend cleaning solar panels every 2 to 4 weeks. In the winter, cleaning once every 6 to 8 weeks is generally sufficient unless a major dust storm occurs."
+      },
+      {
+        question: "Can a cracked solar panel still generate electricity?",
+        answer: "Yes, but it is highly dangerous. A cracked panel allows moisture to enter the electrical layers, causing ground faults, voltage drops, and severe hot spots that can lead to electrical fires. Cracked panels should be isolated and replaced immediately."
+      }
+    ]
+  },
 ];
 
 export const blogs: Blog[] = [...generalBlogs, ...cityBlogs];

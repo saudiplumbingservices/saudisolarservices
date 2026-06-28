@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import SchemaMarkup from "@/components/SchemaMarkup";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import PopupModal from "@/components/PopupModal";
+import LayoutWrapper from "@/components/LayoutWrapper";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -63,12 +62,9 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <SchemaMarkup />
         <PopupModal />
-        <Navbar />
-        <div style={{ paddingTop: "72px" }}>
-          {children}
-        </div>
-        <Footer />
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );
 }
+

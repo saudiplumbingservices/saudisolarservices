@@ -186,3 +186,106 @@ export function adminNewsletterEmail(data: { email: string; name?: string; sourc
   ${footer()}
 </div></body></html>`;
 }
+
+// ─────────────────────────────────────────────────────────
+// 5. Admin notification — new service booking
+// ─────────────────────────────────────────────────────────
+export function adminBookingEmail(data: {
+  name: string;
+  phone: string;
+  email?: string;
+  city: string;
+  service: string;
+  date: string;
+  time: string;
+  message: string;
+}): string {
+  return `<!DOCTYPE html><html><head><meta charset="UTF-8"/></head>
+<body style="${base}">
+<div style="${wrap}">
+  ${header("New Service Booking", `Scheduled via miyartechnicalservices.com — ${new Date().toLocaleString("en-SA", { timeZone: "Asia/Riyadh" })}`)}
+  <div style="padding:8px 0;">
+    <table style="width:100%;border-collapse:collapse;">
+      ${row("Customer", data.name)}
+      ${row("Phone", `<a href="tel:${data.phone}" style="color:#0e7490;">${data.phone}</a>`)}
+      ${data.email ? row("Email", `<a href="mailto:${data.email}" style="color:#0e7490;">${data.email}</a>`) : ""}
+      ${row("City", data.city)}
+      ${row("Service", `<span style="display:inline-block;background:#e0f2fe;color:#0e7490;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;">${data.service}</span>`)}
+      ${row("Preferred Date", `<strong style="color:#0f172a;">${data.date}</strong>`)}
+      ${row("Preferred Time", `<span style="display:inline-block;background:#fef3c7;color:#d97706;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;">${data.time}</span>`)}
+      ${row("Requirements", data.message || "—")}
+    </table>
+  </div>
+  <div style="padding:24px 40px;">
+    <a href="${WHATSAPP}?text=Hi%20${encodeURIComponent(data.name)}%2C%20we%20received%20your%20booking%20for%20${encodeURIComponent(data.service)}%20on%20${encodeURIComponent(data.date)}%20at%20${encodeURIComponent(data.time)}"
+       style="display:inline-block;background:#25d366;color:#fff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px;text-decoration:none;">
+      Reply via WhatsApp →
+    </a>
+  </div>
+  ${footer()}
+</div></body></html>`;
+}
+
+// ─────────────────────────────────────────────────────────
+// 6. Customer auto-reply — booking confirmation
+// ─────────────────────────────────────────────────────────
+export function customerBookingEmail(data: {
+  name: string;
+  phone: string;
+  city: string;
+  service: string;
+  date: string;
+  time: string;
+}): string {
+  return `<!DOCTYPE html><html><head><meta charset="UTF-8"/></head>
+<body style="${base}">
+<div style="${wrap}">
+  ${header(`Booking Received, ${data.name}!`, "We have scheduled your request and will contact you shortly.")}
+  <div style="padding:32px 40px;">
+    <p style="margin:0 0 24px;font-size:15px;color:#374151;line-height:1.7;">
+      Your service booking has been received. Our team will contact you on <strong>${data.phone}</strong> to verify details and dispatch a technician.
+    </p>
+    <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:20px 24px;margin-bottom:28px;">
+      <p style="margin:0 0 10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:#0369a1;">Booking Summary</p>
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <tr>
+          <td style="padding:4px 0;color:#64748b;width:120px;">Service:</td>
+          <td style="padding:4px 0;color:#0f172a;font-weight:600;">${data.service}</td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0;color:#64748b;">City:</td>
+          <td style="padding:4px 0;color:#0f172a;font-weight:600;">${data.city}</td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0;color:#64748b;">Date:</td>
+          <td style="padding:4px 0;color:#0f172a;font-weight:600;">${data.date}</td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0;color:#64748b;">Time Slot:</td>
+          <td style="padding:4px 0;color:#0f172a;font-weight:600;">${data.time}</td>
+        </tr>
+      </table>
+    </div>
+    <p style="margin:0 0 20px;font-size:14px;color:#6b7280;line-height:1.6;">
+      Need immediate assistance or want to reschedule? Click below to chat with our dispatcher on WhatsApp.
+    </p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="${WHATSAPP}?text=Hi%2C%20I%20have%20a%20booking%20for%20${encodeURIComponent(data.service)}%20on%20${encodeURIComponent(data.date)}"
+         style="display:inline-block;background:#25d366;color:#fff;font-size:14px;font-weight:700;padding:12px 22px;border-radius:8px;text-decoration:none;margin-right:10px;">
+        Chat on WhatsApp
+      </a>
+      <a href="tel:${PHONE.replace(/\s/g, '')}"
+         style="display:inline-block;border:1.5px solid #0e7490;color:#0e7490;font-size:14px;font-weight:700;padding:11px 22px;border-radius:8px;text-decoration:none;">
+        ${PHONE}
+      </a>
+    </div>
+  </div>
+  <div style="background:#fafafa;padding:20px 40px;border-top:1px solid #e4e4e7;">
+    <p style="margin:0;font-size:13px;color:#6b7280;">
+      Our services: AC Repair & HVAC · Plumbing Maintenance · Solar Power Systems. Available 24/7.
+    </p>
+  </div>
+  ${footer()}
+</div></body></html>`;
+}
+
