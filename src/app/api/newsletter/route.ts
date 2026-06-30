@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabaseAdmin";
 import { newsletterWelcomeEmail, adminNewsletterEmail } from "@/lib/emailTemplates";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -15,7 +16,27 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Valid email required" }, { status: 400 });
     }
 
-    // 1. Welcome email to subscriber
+    // 1. Save subscriber into Supabase subscribers table
+    try {
+      const { error: dbError } = await supabaseAdmin
+        .from("subscribers")
+        .insert([
+          {
+            email,
+            name: name || null,
+            source: source || null,
+          },
+        ]);
+
+      // Ignore unique constraint violation (code '23505' is duplicate key)
+      if (dbError && dbError.code !== "23505") {
+        throw dbError;
+      }
+    } catch (dbErr) {
+      console.error("Supabase subscribers insert failure:", dbErr);
+    }
+
+    // 2. Welcome email to subscriber
     const welcomeRes = await resend.emails.send({
       from: FROM,
       to: [email],
@@ -28,7 +49,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Subscription failed" }, { status: 500 });
     }
 
-    // 2. Admin notification (fire-and-forget)
+    // 3. Admin notification (fire-and-forget)
     resend.emails.send({
       from: FROM,
       to: [ADMIN_EMAIL],
@@ -39,6 +60,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Newsletter route error:", err);
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    return NextResponse.json({ error: "Server error occurred" }, { status: 500 });
   }
 }
