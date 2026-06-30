@@ -19,6 +19,7 @@ interface Booking {
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [authError, setAuthError] = useState("");
   const [loadingAuth, setLoadingAuth] = useState(false);
@@ -78,7 +79,7 @@ export default function AdminPage() {
       const res = await fetch("/api/admin/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify({ email, password }),
       });
 
       const data = await res.json();
@@ -91,7 +92,7 @@ export default function AdminPage() {
       setIsAuthenticated(true);
       fetchBookings(data.token);
     } catch (err: any) {
-      setAuthError(err.message || "Invalid password");
+      setAuthError(err.message || "Invalid credentials");
     } finally {
       setLoadingAuth(false);
     }
@@ -100,6 +101,7 @@ export default function AdminPage() {
   const handleLogout = () => {
     sessionStorage.removeItem("admin_token");
     setIsAuthenticated(false);
+    setEmail("");
     setPassword("");
     setBookings([]);
   };
@@ -198,12 +200,24 @@ export default function AdminPage() {
           <div className={styles.logoHeader}>
             <div className={styles.logoCircle}>⚙️</div>
             <h2>Miyar Admin Console</h2>
-            <p>Enter administrative credential to access bookings database.</p>
+            <p>Enter administrative credentials to access bookings database.</p>
           </div>
 
           {authError && <div className={styles.errorBox}>{authError}</div>}
 
           <form onSubmit={handleLogin} className={styles.loginForm}>
+            <div className={styles.inputGroup}>
+              <label htmlFor="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder="admin@miyartechnicalservices.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+
             <div className={styles.inputGroup}>
               <label htmlFor="pass">Security Password</label>
               <input
